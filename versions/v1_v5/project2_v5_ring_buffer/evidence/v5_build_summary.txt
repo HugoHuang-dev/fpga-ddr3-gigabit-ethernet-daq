@@ -1,0 +1,21 @@
+Vivado 2018.3 final instrumented build
+
+Bitstream: project2_v5_top.bit
+Probe file: project2_v5_top.ltx
+Implementation: PASS
+Bitstream generation: PASS
+DRC errors: 0
+
+Timing:
+  WNS  +0.554 ns
+  TNS   0.000 ns
+  WHS  +0.053 ns
+  THS   0.000 ns
+  All user specified timing constraints are met.
+
+Utilization:
+  Slice LUTs       11392 / 20800 (54.77%)
+  Slice Registers  15101 / 41600 (36.30%)
+  Block RAM Tile      23 / 50    (46.00%)
+
+Note: inherited course FIFO/MIG/UDP IP emits reset/BRAM implementation warnings. No implementation or DRC error is present. Board-level continuous testing remains pending.

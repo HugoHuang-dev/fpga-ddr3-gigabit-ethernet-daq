@@ -1,0 +1,36 @@
+Project2 v5 approximately 225 Mb/s diagnostic candidate
+Build completed: 2026-09-21 11:50 Asia/Shanghai
+Vivado: 2018.3
+Device: xc7a35tfgg484-2
+
+Functional configuration:
+- POST_READY_IDLE_CYCLES = 2550
+- PRBS source reset = adma_reset
+- ILA probe39 = sticky mac_frame_fifo_overflow
+- ILA probe40 = sticky mac_data_fifo_overflow
+
+Behavioral regression:
+V5 RING/FLOW SIM PASSED: committed=76800 released=73728 occupancy=3072 stalls=17 packets=2
+
+Implementation timing:
+WNS = +0.982 ns
+TNS = 0.000 ns
+WHS = +0.057 ns
+THS = 0.000 ns
+All user specified timing constraints are met.
+
+Checks:
+- POST_LINK_CDC_CONSTRAINT_APPLIED present
+- Routed bus-skew report generated; no VIOLATED entry
+- DRC = 0 errors; inherited warnings remain
+- Matching LTX contains both named MAC FIFO probes
+
+Utilization and detailed reports are under reports/.
+
+SHA-256:
+project2_v5_top.bit  715D1FD4565129A87150922E5D4805152B6315E721056F4A8AA3A8EC4B251A91
+project2_v5_top.ltx  7EEBB68F7DF07BC0F406E21123A449CB7B3B8941C15F8F174DD6068AA00CC846
+
+Board status:
+Not yet board-tested.
+

@@ -1,0 +1,16 @@
+Vivado 2018.3 behavioral simulation
+Targeted UDP-ready, IPv4 checksum carry-boundary and ring-flow simulation:
+IPv4 checksum sums 0x2fffe and 0x2ffff verified as 0xfffe and 0xfffd.
+V5 RING/FLOW SIM PASSED: committed=76800 released=73728 occupancy=3072 stalls=17 packets=2
+
+Final controlled-rate diagnostic implementation after post-link CDC constraint:
+POST_READY_IDLE_CYCLES=3000 at 100 MHz; expected payload rate approximately 199.7 Mb/s
+WNS=+0.982 ns, TNS=0.000 ns, WHS=+0.057 ns, THS=0.000 ns
+Slice LUTs=11424, Slice Registers=15121, Block RAM Tile=23
+
+project2_v5_top.bit SHA256: E0BFAA90E77DDE94257B0FADD033CE97A525727A88EF42C5B377DD6D1947FBD3
+project2_v5_top.ltx SHA256: 9C76CD050FE5EC07BB8F57763B124F2F55F324171469F33C22CD040041A01931
+udp_v5_monitor_rio.exe SHA256: 2C9FD4FB01C2A26C84413E293736C20CBF86F81A17F4D4626CDC5AB58576F253
+
+Test configuration: 4096-byte ring, 1024-byte slots.
+The test deliberately filled the ring, observed write backpressure, released space only after a complete burst entered the TX FIFO, and confirmed that writing resumed without occupancy overflow or underflow.

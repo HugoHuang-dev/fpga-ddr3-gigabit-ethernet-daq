@@ -1,0 +1,352 @@
+{
+    "CimClass":  {
+                     "CimSuperClassName":  "MSFT_NetAdapterSettingData",
+                     "CimSuperClass":  {
+                                           "CimSuperClassName":  "MSFT_NetSettingData",
+                                           "CimSuperClass":  "ROOT/StandardCimv2:MSFT_NetSettingData",
+                                           "CimClassProperties":  "Caption Description ElementName InstanceID InterfaceDescription Name Source SystemName",
+                                           "CimClassQualifiers":  "UMLPackagePath = \"CIM::Core::Settings\" ClassVersion = \"1.0.0\" locale = 1033",
+                                           "CimClassMethods":  "",
+                                           "CimSystemProperties":  "Microsoft.Management.Infrastructure.CimSystemProperties"
+                                       },
+                     "CimClassProperties":  [
+                                                "Caption",
+                                                "Description",
+                                                "ElementName",
+                                                "InstanceID",
+                                                "InterfaceDescription",
+                                                "Name",
+                                                "Source",
+                                                "SystemName",
+                                                "OutboundDiscardedPackets",
+                                                "OutboundPacketErrors",
+                                                "RdmaStatistics",
+                                                "ReceivedBroadcastBytes",
+                                                "ReceivedBroadcastPackets",
+                                                "ReceivedBytes",
+                                                "ReceivedDiscardedPackets",
+                                                "ReceivedMulticastBytes",
+                                                "ReceivedMulticastPackets",
+                                                "ReceivedPacketErrors",
+                                                "ReceivedUnicastBytes",
+                                                "ReceivedUnicastPackets",
+                                                "RscStatistics",
+                                                "SentBroadcastBytes",
+                                                "SentBroadcastPackets",
+                                                "SentBytes",
+                                                "SentMulticastBytes",
+                                                "SentMulticastPackets",
+                                                "SentUnicastBytes",
+                                                "SentUnicastPackets",
+                                                "SupportedStatistics"
+                                            ],
+                     "CimClassQualifiers":  [
+                                                "UMLPackagePath = \"CIM::Core::Settings\"",
+                                                "ClassVersion = \"1.0.0\"",
+                                                "dynamic = True",
+                                                "locale = 1033",
+                                                "provider = \"NetAdapterCim\""
+                                            ],
+                     "CimClassMethods":  [
+
+                                         ],
+                     "CimSystemProperties":  {
+                                                 "Namespace":  "ROOT/StandardCimv2",
+                                                 "ServerName":  "HUGO",
+                                                 "ClassName":  "MSFT_NetAdapterStatisticsSettingData",
+                                                 "Path":  null
+                                             }
+                 },
+    "CimInstanceProperties":  [
+                                  {
+                                      "Name":  "Caption",
+                                      "Value":  "MSFT_NetAdapterStatisticsSettingData \u0027Realtek USB GbE Family Controller\u0027",
+                                      "CimType":  14,
+                                      "Flags":  "Property, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "Description",
+                                      "Value":  "Realtek USB GbE Family Controller",
+                                      "CimType":  14,
+                                      "Flags":  "Property, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "ElementName",
+                                      "Value":  "Realtek USB GbE Family Controller",
+                                      "CimType":  14,
+                                      "Flags":  "Property, Required, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "InstanceID",
+                                      "Value":  "{B0C6FAB0-8B18-47F3-AE90-13A6A961C1AA}",
+                                      "CimType":  14,
+                                      "Flags":  "Property, Key, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "InterfaceDescription",
+                                      "Value":  "Realtek USB GbE Family Controller",
+                                      "CimType":  14,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "Name",
+                                      "Value":  "以太网",
+                                      "CimType":  14,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "Source",
+                                      "Value":  2,
+                                      "CimType":  6,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "SystemName",
+                                      "Value":  "Hugo",
+                                      "CimType":  14,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "OutboundDiscardedPackets",
+                                      "Value":  0,
+                                      "CimType":  8,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "OutboundPacketErrors",
+                                      "Value":  0,
+                                      "CimType":  8,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "RdmaStatistics",
+                                      "Value":  "MSFT_NetAdapter_RdmaStatistics",
+                                      "CimType":  16,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "ReceivedBroadcastBytes",
+                                      "Value":  180,
+                                      "CimType":  8,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "ReceivedBroadcastPackets",
+                                      "Value":  3,
+                                      "CimType":  8,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "ReceivedBytes",
+                                      "Value":  141796632172,
+                                      "CimType":  8,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "ReceivedDiscardedPackets",
+                                      "Value":  0,
+                                      "CimType":  8,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "ReceivedMulticastBytes",
+                                      "Value":  0,
+                                      "CimType":  8,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "ReceivedMulticastPackets",
+                                      "Value":  0,
+                                      "CimType":  8,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "ReceivedPacketErrors",
+                                      "Value":  0,
+                                      "CimType":  8,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "ReceivedUnicastBytes",
+                                      "Value":  141796631992,
+                                      "CimType":  8,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "ReceivedUnicastPackets",
+                                      "Value":  130088656,
+                                      "CimType":  8,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "RscStatistics",
+                                      "Value":  "MSFT_NetAdapter_RscStatistics",
+                                      "CimType":  16,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "SentBroadcastBytes",
+                                      "Value":  40772,
+                                      "CimType":  8,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "SentBroadcastPackets",
+                                      "Value":  657,
+                                      "CimType":  8,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "SentBytes",
+                                      "Value":  233151,
+                                      "CimType":  8,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "SentMulticastBytes",
+                                      "Value":  192238,
+                                      "CimType":  8,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "SentMulticastPackets",
+                                      "Value":  1833,
+                                      "CimType":  8,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "SentUnicastBytes",
+                                      "Value":  141,
+                                      "CimType":  8,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "SentUnicastPackets",
+                                      "Value":  3,
+                                      "CimType":  8,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  },
+                                  {
+                                      "Name":  "SupportedStatistics",
+                                      "Value":  4163583,
+                                      "CimType":  6,
+                                      "Flags":  "Property, ReadOnly, NotModified",
+                                      "IsValueModified":  false
+                                  }
+                              ],
+    "CimSystemProperties":  {
+                                "Namespace":  "ROOT/StandardCimv2",
+                                "ServerName":  "HUGO",
+                                "ClassName":  "MSFT_NetAdapterStatisticsSettingData",
+                                "Path":  null
+                            },
+    "ifAlias":  "以太网",
+    "InterfaceAlias":  "以太网",
+    "ifDesc":  "Realtek USB GbE Family Controller",
+    "Caption":  "MSFT_NetAdapterStatisticsSettingData \u0027Realtek USB GbE Family Controller\u0027",
+    "Description":  "Realtek USB GbE Family Controller",
+    "ElementName":  "Realtek USB GbE Family Controller",
+    "InstanceID":  "{B0C6FAB0-8B18-47F3-AE90-13A6A961C1AA}",
+    "InterfaceDescription":  "Realtek USB GbE Family Controller",
+    "Name":  "以太网",
+    "Source":  2,
+    "SystemName":  "Hugo",
+    "OutboundDiscardedPackets":  0,
+    "OutboundPacketErrors":  0,
+    "RdmaStatistics":  {
+                           "CimClass":  {
+                                            "CimSuperClassName":  null,
+                                            "CimSuperClass":  null,
+                                            "CimClassProperties":  "AcceptedConnections ActiveConnections CompletionQueueErrors ConnectionErrors FailedConnectionAttempts InboundBytes InboundFrames InitiatedConnections OutboundBytes OutboundFrames",
+                                            "CimClassQualifiers":  "ClassVersion = \"1.0.0\" locale = 1033",
+                                            "CimClassMethods":  "",
+                                            "CimSystemProperties":  "Microsoft.Management.Infrastructure.CimSystemProperties"
+                                        },
+                           "CimInstanceProperties":  [
+                                                         "AcceptedConnections = 0",
+                                                         "ActiveConnections = 0",
+                                                         "CompletionQueueErrors = 0",
+                                                         "ConnectionErrors = 0",
+                                                         "FailedConnectionAttempts = 0",
+                                                         "InboundBytes = 0",
+                                                         "InboundFrames = 0",
+                                                         "InitiatedConnections = 0",
+                                                         "OutboundBytes = 0",
+                                                         "OutboundFrames = 0"
+                                                     ],
+                           "CimSystemProperties":  {
+                                                       "Namespace":  "ROOT/StandardCimv2",
+                                                       "ServerName":  "HUGO",
+                                                       "ClassName":  "MSFT_NetAdapter_RdmaStatistics",
+                                                       "Path":  null
+                                                   }
+                       },
+    "ReceivedBroadcastBytes":  180,
+    "ReceivedBroadcastPackets":  3,
+    "ReceivedBytes":  141796632172,
+    "ReceivedDiscardedPackets":  0,
+    "ReceivedMulticastBytes":  0,
+    "ReceivedMulticastPackets":  0,
+    "ReceivedPacketErrors":  0,
+    "ReceivedUnicastBytes":  141796631992,
+    "ReceivedUnicastPackets":  130088656,
+    "RscStatistics":  {
+                          "CimClass":  {
+                                           "CimSuperClassName":  null,
+                                           "CimSuperClass":  null,
+                                           "CimClassProperties":  "CoalescedBytes CoalescedPackets CoalescingEvents CoalescingExceptions",
+                                           "CimClassQualifiers":  "ClassVersion = \"1.0.0\" locale = 1033",
+                                           "CimClassMethods":  "",
+                                           "CimSystemProperties":  "Microsoft.Management.Infrastructure.CimSystemProperties"
+                                       },
+                          "CimInstanceProperties":  [
+                                                        "CoalescedBytes = 0",
+                                                        "CoalescedPackets = 0",
+                                                        "CoalescingEvents = 0",
+                                                        "CoalescingExceptions = 130088659"
+                                                    ],
+                          "CimSystemProperties":  {
+                                                      "Namespace":  "ROOT/StandardCimv2",
+                                                      "ServerName":  "HUGO",
+                                                      "ClassName":  "MSFT_NetAdapter_RscStatistics",
+                                                      "Path":  null
+                                                  }
+                      },
+    "SentBroadcastBytes":  40772,
+    "SentBroadcastPackets":  657,
+    "SentBytes":  233151,
+    "SentMulticastBytes":  192238,
+    "SentMulticastPackets":  1833,
+    "SentUnicastBytes":  141,
+    "SentUnicastPackets":  3,
+    "SupportedStatistics":  4163583,
+    "PSComputerName":  null
+}

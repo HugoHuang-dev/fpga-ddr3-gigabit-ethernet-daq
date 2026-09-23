@@ -1,0 +1,22 @@
+Project2 v5 MAX unpaced candidate validation
+
+Functional change: POST_READY_IDLE_CYCLES 950 -> 0.
+Predicted payload rate from the measured 400 Mb/s packet period: approximately 744 Mb/s.
+Vivado 2018.3 behavioral regression PASS:
+V5 RING/FLOW SIM PASSED: committed=76800 released=73728 occupancy=3072 stalls=17 packets=2
+
+Implementation PASS.
+WNS +0.982 ns, TNS 0.000 ns.
+WHS +0.054 ns, THS 0.000 ns.
+All user timing constraints are met.
+All routed bus-skew constraints are MET.
+DRC: 0 errors; inherited IP warnings/advisories remain.
+
+Slice LUTs: 11394
+Slice Registers: 15104
+Block RAM Tile: 23
+
+BIT SHA256: 7BA937B17F5B450E63B04513B077CFA848C568416433731A8408434B160296F5
+LTX SHA256: 9C76CD050FE5EC07BB8F57763B124F2F55F324171469F33C22CD040041A01931
+
+Board validation pending.

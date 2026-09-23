@@ -1,0 +1,16 @@
+{
+  "passed": false,
+  "duration_seconds": 60.00273089999973,
+  "packets_received": 21232,
+  "payload_bytes": 21741568,
+  "payload_rate_mbps": 2.898743797009425,
+  "missing_packets": 679324,
+  "duplicates": 0,
+  "out_of_order": 0,
+  "malformed": 0,
+  "metadata_errors": 0,
+  "data_error_packets": 0,
+  "data_error_bytes": 0,
+  "max_reported_occupancy_bytes": 262144,
+  "last_committed_bytes_low": 717630464
+}

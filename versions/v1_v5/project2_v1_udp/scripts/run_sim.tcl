@@ -1,0 +1,19 @@
+# -----------------------------------------------------------------------------
+# Hugo's FPGA Project
+# -----------------------------------------------------------------------------
+# Author  : sunmingyin.huang@haw-hamburg.de
+# Project : FPGA DDR3-Buffered Data Acquisition and Gigabit Ethernet Transmission System
+# File    : run_sim.tcl
+# Module  : Vivado build script
+# Created : 2026-07-19
+# Revised : 2026-09-19
+# Editor  : Sublime Text 3 (Build 3211), Tab Size (4)
+# -----------------------------------------------------------------------------
+set script_dir [file dirname [file normalize [info script]]]
+set root_dir   [file normalize [file join $script_dir ..]]
+open_project [file join $root_dir build project2_v1_udp.xpr]
+set_property top tb_udp_v1_app [get_filesets sim_1]
+launch_simulation
+run all
+close_sim
+close_project

@@ -1,0 +1,48 @@
+Project2 v5 deterministic IPv4 checksum analysis
+Date: 2026-09-20
+
+Observed board result at approximately 199.713 Mb/s:
+  packets_received = 1462744
+  missing_packets = 299
+  gap_events = 24
+  regular signature = missing increases by 2 about every 2.69 seconds
+
+IPv4 header inputs:
+  total length = 20 + 8 + 1048 = 1076 = 0x0434
+  protocol = UDP = 0x11
+  source = 192.168.1.11
+  destination = 192.168.1.100
+  flags/fragment = 0x4000
+  TTL/protocol = 0x8011
+
+Sum excluding the 16-bit identification field:
+  0x4500 + 0x0434 + 0x4000 + 0x8011
+  + 0xC0A8 + 0x010B + 0xC0A8 + 0x0164
+  = 0x28D04
+
+Exhaustive ID evaluation finds exactly two values per 65536-ID cycle for
+which the first 16-bit end-around fold creates another carry:
+
+  ID 0x72FA: raw sum 0x2FFFE -> first fold 0x10000
+             second fold 0x0001 -> checksum 0xFFFE
+  ID 0x72FB: raw sum 0x2FFFF -> first fold 0x10001
+             second fold 0x0002 -> checksum 0xFFFD
+
+The inherited ip_send.v assigned the first fold directly to a 16-bit
+register, discarding its carry, then complemented that truncated value.
+Those two IPv4 headers were invalid and were discarded before UDP delivery.
+
+At about 24388 packets/s:
+  65536 / 24388 = 2.687 seconds per recurrence
+
+This exactly matches the repeated two-packet gap in the screenshots.
+
+Fix:
+  1. calculate the first fold with 17 bits;
+  2. add the carry back into the low 16 bits;
+  3. complement only after the second fold.
+
+Regression:
+  Vivado simulation forces raw sums 0x2FFFE and 0x2FFFF and verifies
+  corrected checksums 0xFFFE and 0xFFFD. Existing ring-flow and UDP-ready
+  regressions also pass.

@@ -1,0 +1,7 @@
+Project2 V7 的完整上板流程请阅读同目录的 BOARD_TEST_V7.md。
+
+该 Markdown 已一次性包含：下载与状态门禁、双窗口 START/STOP、256/512/1024
+字节包长、SET_RATE、FINITE、非法命令与错误 CRC、60 秒筛选、300 秒终验、
+PASS/FAIL 判据和证据清单。
+
+不要再以本 txt 文件作为分步操作来源。

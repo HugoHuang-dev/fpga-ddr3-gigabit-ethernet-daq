@@ -1,0 +1,8 @@
+Targeted behavioral regression added after the Windows RIO board run disproved the PC receive bottleneck hypothesis.
+
+The testbench models the course net21/udp_send behavior: app_tx_ready is high on the clock edge that accepts app_tx_data_last, then low for 50 clocks. Against the original packetizer, Vivado XSim reported:
+
+FAIL packetizer drove data while app_tx_ready was low (40 occurrences)
+FAIL packetizer packets=1 framing=0 errors=40
+
+This reproduces the board symptom: the packetizer advances its sequence and source FIFO for a packet that udp_send is not accepting. The receiver therefore sees valid packets and clean PRBS data, but sequence gaps.

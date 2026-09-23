@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Sep 22 19:53:48 2026
+# Process ID: 21112
+# Current directory: archive/project2_v8_xadc_acquisition
+# Command line: vivado.exe -mode batch -source V:\outputs\project2_v8_xadc_acquisition\scripts\set_mig_external_temp.tcl -log V:\outputs\project2_v8_xadc_acquisition\set_mig_external_temp.log -journal V:\outputs\project2_v8_xadc_acquisition\set_mig_external_temp.jou
+# Log file: V:/outputs/project2_v8_xadc_acquisition/set_mig_external_temp.log
+# Journal file: V:\outputs\project2_v8_xadc_acquisition\set_mig_external_temp.jou
+#-----------------------------------------------------------
+source {V:\outputs\project2_v8_xadc_acquisition\scripts\set_mig_external_temp.tcl}
+# set script_dir [file dirname [file normalize [info script]]]
+# set root_dir [file normalize [file join $script_dir ..]]
+# open_project [file join $root_dir build project2_v8_xadc_acquisition.xpr]
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+# set mig [get_ips mig_7series_0]
+ERROR: [Vivado 12-4372] Parameter 'TEMP_MON_CONTROL' is not configurable on IP 'mig_7series_0'.
+ERROR: [Vivado 12-1342] Failed to set property 'CONFIG.TEMP_MON_CONTROL' on IP 'mig_7series_0'.
+# puts "TRY_CONFIG=[catch {set_property CONFIG.TEMP_MON_CONTROL EXTERNAL $mig} result];$result"
+TRY_CONFIG=1;ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+
+ERROR: [Vivado 12-1342] Failed to set property 'MODELPARAM_VALUE.TEMP_MON_CONTROL' on IP 'mig_7series_0'.
+# puts "TRY_MODELPARAM=[catch {set_property MODELPARAM_VALUE.TEMP_MON_CONTROL EXTERNAL $mig} result2];$result2"
+TRY_MODELPARAM=1;ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+
+ERROR: [Vivado 12-1341] Failed to get property 'MODELPARAM_VALUE.TEMP_MON_CONTROL' on IP 'mig_7series_0'.
+ERROR: [Common 17-39] 'get_property' failed due to earlier errors.
+
+    while executing
+"get_property MODELPARAM_VALUE.TEMP_MON_CONTROL $mig"
+    invoked from within
+"puts "VALUE=[get_property MODELPARAM_VALUE.TEMP_MON_CONTROL $mig]""
+    (file "V:\outputs\project2_v8_xadc_acquisition\scripts\set_mig_external_temp.tcl" line 7)
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 22 19:53:54 2026...

@@ -1,0 +1,21 @@
+Project2 约 400 Mb/s 速度探索测试
+
+这不是长期稳定性测试，而是寻找当前整套系统的最高严格零丢包速度。
+本档只先测试 60 秒，不启动 PktMon。
+
+1. 保持与 315 Mb/s 五分钟通过时完全相同的网线、网卡和主机环境。
+2. Windows 使用高性能模式。
+3. 完全退出微信、网易云音乐、浏览器下载、网盘同步等不必要程序。
+4. 在 Vivado Hardware Manager 下载：
+   fpga\project2_v5_400m.bit
+   fpga\project2_v5_400m.ltx
+5. 下载完成后按一次开发板 RESET，等待至少 5 秒。暂时不要按 KEY0。
+6. 在接收主机右键 01_Run_400M_60s_NoCapture.cmd，选择“以管理员身份运行”。
+7. 按窗口提示继续；只有看到 ARMED 后才按一次 KEY0。
+8. 等待 60 秒结束，随后按一次 RESET，再回到窗口按 Enter。
+9. 保留并发回最新生成的整个 results\日期时间 文件夹。
+
+严格 PASS：missing、gap_events、duplicate、out_of_order、malformed、metadata_errors、data_error_packets、data_error_bytes、receive_completion_errors 必须全部为 0。
+
+若通过：在同样条件下重复一次，然后准备下一速度档。
+若失败：不要反复重跑或改变多个条件，保留结果以缩小 315--400 Mb/s 边界。

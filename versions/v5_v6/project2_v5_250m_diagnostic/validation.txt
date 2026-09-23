@@ -1,0 +1,41 @@
+Project2 v5 approximately 248 Mb/s diagnostic candidate
+Build completed: 2026-09-21 11:22 Asia/Shanghai
+Vivado: 2018.3
+Device: xc7a35tfgg484-2
+
+Functional changes:
+- POST_READY_IDLE_CYCLES = 2200
+- PRBS source reset changed to adma_reset
+- ILA probe39 = sticky mac_frame_fifo_overflow
+- ILA probe40 = sticky mac_data_fifo_overflow
+
+Behavioral regression:
+V5 RING/FLOW SIM PASSED: committed=76800 released=73728 occupancy=3072 stalls=17 packets=2
+
+Implementation timing:
+WNS = +0.380 ns
+TNS = 0.000 ns
+WHS = +0.053 ns
+THS = 0.000 ns
+All user specified timing constraints are met.
+
+CDC and implementation checks:
+- POST_LINK_CDC_CONSTRAINT_APPLIED present in implementation log
+- Routed bus-skew report generated: reports/bus_skew.rpt
+- All bus-skew summary constraints have positive slack
+- DRC: 0 errors; inherited warnings remain
+- One inherited Vivado 2018.3 critical warning reports that `if` is unsupported inside the XDC; the post-link Tcl hook applies the asynchronous clock-group constraint and logs the marker above.
+
+Utilization:
+Slice LUTs: 11504 / 20800 (55.31%)
+Slice Registers: 15223 / 41600 (36.59%)
+Block RAM Tile: 23.5 / 50 (47.00%)
+DSPs: 0 / 90
+
+Final artifact SHA-256:
+project2_v5_top.bit  61965B6466B97F202CC36B33A1B269DCDC579781201707E96AF00FBD69DA0DF9
+project2_v5_top.ltx  7EEBB68F7DF07BC0F406E21123A449CB7B3B8941C15F8F174DD6068AA00CC846
+
+Board status:
+Not yet board-tested. Do not label this image as a validated operating point until the staged tests pass.
+

@@ -1,0 +1,15 @@
+{
+  "packets": 29755,
+  "bytes": 30469120,
+  "first_sequence": 42911,
+  "last_sequence": 72665,
+  "lost_packets": 0,
+  "duplicate_packets": 0,
+  "out_of_order_packets": 0,
+  "malformed_packets": 0,
+  "data_error_packets": 0,
+  "data_error_bytes": 0,
+  "duration_seconds": 30.000470199999654,
+  "udp_mbps": 8.124971321282917,
+  "passed": true
+}

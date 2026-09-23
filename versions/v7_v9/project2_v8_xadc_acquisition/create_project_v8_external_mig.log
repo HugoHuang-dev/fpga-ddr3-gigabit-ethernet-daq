@@ -1,0 +1,74 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Sep 22 19:57:50 2026
+# Process ID: 20396
+# Current directory: archive/project2_v8_xadc_acquisition
+# Command line: vivado.exe -mode batch -source V:\outputs\project2_v8_xadc_acquisition\scripts\create_project.tcl -log V:\outputs\project2_v8_xadc_acquisition\create_project_v8_external_mig.log -journal V:\outputs\project2_v8_xadc_acquisition\create_project_v8_external_mig.jou
+# Log file: V:/outputs/project2_v8_xadc_acquisition/create_project_v8_external_mig.log
+# Journal file: V:\outputs\project2_v8_xadc_acquisition\create_project_v8_external_mig.jou
+#-----------------------------------------------------------
+source {V:\outputs\project2_v8_xadc_acquisition\scripts\create_project.tcl}
+# set script_dir [file dirname [file normalize [info script]]]
+# set root_dir [file normalize [file join $script_dir ..]]
+# set build_dir [file join $root_dir build]
+# create_project project2_v8_xadc_acquisition $build_dir -part xc7a35tfgg484-2 -force
+# set_property target_language Verilog [current_project]
+# set_property simulator_language Mixed [current_project]
+# add_files -norecurse [glob [file join $root_dir rtl vendor net21 *.v]]
+# add_files -norecurse [glob [file join $root_dir rtl vendor adma_v1 *.v]]
+# add_files -norecurse [glob [file join $root_dir rtl *.v]]
+# set used_ip_files {}
+# foreach ip_file [glob [file join $root_dir ip *.xcix]] {
+#     set ip_name [file tail $ip_file]
+#     if {$ip_name ne "fifo_w72xd512.xcix" && $ip_name ne "fifo_w288xd512.xcix"} { lappend used_ip_files $ip_file }
+# }
+# add_files -norecurse $used_ip_files
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+# add_files -norecurse [file join $root_dir ip mig_7series_0 mig_7series_0.xci]
+# set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {200.000} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {125.000} CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {150.000}] [get_ips clk_wiz_0]
+# add_files -fileset constrs_1 -norecurse [file join $root_dir constraints project2_v5_pins.xdc]
+# add_files -fileset constrs_1 -norecurse [file join $root_dir constraints project2_v5_timing.xdc]
+# set_property PROCESSING_ORDER LATE [get_files *project2_v5_timing.xdc]
+# set_property STEPS.OPT_DESIGN.TCL.PRE [file join $root_dir scripts apply_post_link_constraints.tcl] [get_runs impl_1]
+WARNING: [Runs 36-537] File V:/outputs/project2_v8_xadc_acquisition/scripts/apply_post_link_constraints.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) impl_1. This file will not be handled as part of the project for archive and other project based functionality.
+# add_files -fileset sim_1 -norecurse [glob [file join $root_dir sim *.v]]
+# set_property top project2_v8_top [get_filesets sources_1]
+# set_property top tb_v8_uart_control [get_filesets sim_1]
+# create_ip -name ila -vendor xilinx.com -library ip -version 6.2 -module_name ila_v6
+# set_property -dict [list CONFIG.C_NUM_OF_PROBES {39} CONFIG.C_DATA_DEPTH {2048} \
+#     CONFIG.C_PROBE0_WIDTH {1} CONFIG.C_PROBE1_WIDTH {1} CONFIG.C_PROBE2_WIDTH {12} \
+#     CONFIG.C_PROBE3_WIDTH {1} CONFIG.C_PROBE4_WIDTH {1} CONFIG.C_PROBE5_WIDTH {32} \
+#     CONFIG.C_PROBE6_WIDTH {32} CONFIG.C_PROBE7_WIDTH {1} CONFIG.C_PROBE8_WIDTH {1} \
+#     CONFIG.C_PROBE9_WIDTH {1} CONFIG.C_PROBE10_WIDTH {1} CONFIG.C_PROBE11_WIDTH {32} \
+#     CONFIG.C_PROBE12_WIDTH {32} CONFIG.C_PROBE13_WIDTH {32} CONFIG.C_PROBE14_WIDTH {32} \
+#     CONFIG.C_PROBE15_WIDTH {32} CONFIG.C_PROBE16_WIDTH {14} CONFIG.C_PROBE17_WIDTH {4} \
+#     CONFIG.C_PROBE18_WIDTH {1} CONFIG.C_PROBE19_WIDTH {1} CONFIG.C_PROBE20_WIDTH {32} \
+#     CONFIG.C_PROBE21_WIDTH {1} CONFIG.C_PROBE22_WIDTH {1} CONFIG.C_PROBE23_WIDTH {32} \
+#     CONFIG.C_PROBE24_WIDTH {32} CONFIG.C_PROBE25_WIDTH {32} CONFIG.C_PROBE26_WIDTH {32} \
+#     CONFIG.C_PROBE27_WIDTH {32} CONFIG.C_PROBE28_WIDTH {32} CONFIG.C_PROBE29_WIDTH {1} \
+#     CONFIG.C_PROBE30_WIDTH {1} CONFIG.C_PROBE31_WIDTH {1} CONFIG.C_PROBE32_WIDTH {1} \
+#     CONFIG.C_PROBE33_WIDTH {1} CONFIG.C_PROBE34_WIDTH {1} CONFIG.C_PROBE35_WIDTH {1} \
+#     CONFIG.C_PROBE36_WIDTH {1} CONFIG.C_PROBE37_WIDTH {1} CONFIG.C_PROBE38_WIDTH {1}] [get_ips ila_v6]
+# update_compile_order -fileset sources_1
+# update_compile_order -fileset sim_1
+# generate_target all [get_ips]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ila_v6'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ila_v6'...
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'v:/outputs/project2_v8_xadc_acquisition/build/project2_v8_xadc_acquisition.srcs/sources_1/ip/ila_v6/ila_v6_ooc.xdc'
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ila_v6'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'ila_v6'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ila_v6'...
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'mig_7series_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'mig_7series_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'mig_7series_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'mig_7series_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'mig_7series_0'...
+generate_target: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 711.754 ; gain = 295.988
+# export_ip_user_files -of_objects [get_ips] -no_script -sync -force -quiet
+# puts "PROJECT_CREATED: [file join $build_dir project2_v8_xadc_acquisition.xpr]"
+PROJECT_CREATED: V:/outputs/project2_v8_xadc_acquisition/build/project2_v8_xadc_acquisition.xpr
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 22 19:58:14 2026...

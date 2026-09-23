@@ -1,0 +1,36 @@
+Project2 v5 315 Mb/s PktMon/RIO gap correlation
+Date: 2026-09-20 local (Asia/Shanghai)
+
+RIO result:
+  duration_seconds=60.0004115
+  packets_received=2306770
+  payload_rate_mbps=314.948837309
+  gap expected=373776 received=373790 missing=14
+  all delivered-packet validation errors=0
+
+Capture provenance:
+  PktMon global capture actually remained bound to
+  evidence/ingress_20260920_230946/ingress.etl.
+  The later ingress_20260920_234803 directory did not receive an ETL.
+  PktMon stop reported no event loss.
+  Conversion produced 3,363,237 formatted packets in ingress_final.pcapng.
+
+Full-PCAP P2V5 header scan around the RIO gap:
+  seq 373770..373775: 2 observations each
+  seq 373776..373789: 0 observations each
+  seq 373790..373795: 2 observations each
+
+The two observations per present sequence are capture-layer duplicates. The
+same 14-sequence interval is absent from both observations. Therefore these
+packets were not lost only between Windows packet capture and the RIO
+application. The remaining boundary includes FPGA MAC/PHY, cable/link, USB
+adapter/front-end queues, and points earlier than the PktMon NIC observation.
+
+Adapter statistics before/after the 315 Mb/s test:
+  ReceivedPacketErrors: 0 -> 0
+  ReceivedDiscardedPackets: 0 -> 0
+
+These counters do not prove that the USB adapter or an earlier receive queue
+could not drop frames. The next test is the identical 315 Mb/s image after a
+full reset with PktMon stopped. If loss remains, expose MAC data/frame FIFO
+full conditions as sticky ILA/status signals.

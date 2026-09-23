@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "packets_received": 64,
+  "packets_expected": 64,
+  "missing_sequences": [],
+  "duplicates": 0,
+  "out_of_order": 0,
+  "malformed": 0,
+  "data_error_packets": 0,
+  "data_error_bytes": 0,
+  "payload_bytes": 65536,
+  "udp_bytes": 66560,
+  "elapsed_seconds": 2.111667099998158
+}

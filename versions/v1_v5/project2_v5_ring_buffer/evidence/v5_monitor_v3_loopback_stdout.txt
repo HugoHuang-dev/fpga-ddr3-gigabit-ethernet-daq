@@ -1,0 +1,11 @@
+Project2 v5 native PC monitor v3
+Preparing direct-index PRBS reference table ...
+Checking FPGA reachability at 127.0.0.1 ...
+PASS: FPGA ping reply received
+ARMED: listening on 127.0.0.1:6666
+Socket receive buffer: requested=67108864 bytes actual=67108864 bytes
+Press FPGA KEY0 once to start v5; press RESET after the monitor finishes.
+FINAL: time=1.017s packets=300 rate=2.416 Mb/s missing=0 duplicate=0 out_of_order=0 malformed=0 metadata_errors=0 data_error_packets=0 data_error_bytes=0 payload_bytes=307200 max_occupancy=1024
+JSON result written to evidence\v5_monitor_v3_loopback_selftest.json
+Press FPGA RESET now to stop/rearm the continuous source.
+V5 DDR3 RING-BUFFER STREAM TEST PASSED

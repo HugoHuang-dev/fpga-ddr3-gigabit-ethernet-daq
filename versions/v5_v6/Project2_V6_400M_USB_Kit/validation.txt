@@ -1,0 +1,35 @@
+Project2 V6 build validation
+
+Architecture:
+- Continuous PRBS source -> 4 KiB ingress FIFO -> DDR3 ring -> 8-packet TX FIFO -> UDP
+- AXI write, AXI read, and UDP transmit stages may run concurrently.
+- Ingress hysteresis: pause at 3072 bytes, resume at 1024 bytes.
+- DDR drain hysteresis: start at 65536 bytes, stop at 16384 bytes.
+- AXI burst size: 1024 bytes.
+
+Behavioral simulation:
+- PASS: high/low watermarks observed.
+- PASS: concurrent pipeline activity observed.
+- PASS: packet header remains P2V5/version 0x05 for the validated receiver.
+- Final line: V6 PIPELINE SIM PASSED: packets=83 committed=1568 released=1456 occupancy=112
+
+Vivado implementation:
+- Bitstream generation: PASS
+- Setup: WNS +0.887 ns, TNS 0
+- Hold: WHS +0.055 ns, THS 0
+- Routed bus-skew constraints: MET
+- DRC errors: 0
+
+Post-implementation utilization:
+- Slice LUTs: 14,126 / 20,800 (67.91%)
+- Slice registers: 16,434 / 41,600 (39.50%)
+- BRAM tiles: 36 / 50 (72.00%)
+- DSPs: 0
+
+Artifact identity:
+- BIT SHA-256: 514043C21BB8780886AF774E51BE701DE17FBF2B67611006206BF46BE94E2254
+- LTX SHA-256: 84486ADDAB52CD3D26FB2410E629CBD61E271F0ACE1C2CA75D86E0B8ECBBCBE7
+
+Board status:
+- Pending first controlled 60-second 400 Mb/s run.
+- No board-level V6 pass is claimed by this file.

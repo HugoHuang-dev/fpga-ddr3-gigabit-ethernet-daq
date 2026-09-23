@@ -1,0 +1,8 @@
+{
+    "Name":  "ÒÔÌ«Íø",
+    "InterfaceDescription":  "Realtek USB GbE Family Controller",
+    "InterfaceGuid":  "{B0C6FAB0-8B18-47F3-AE90-13A6A961C1AA}",
+    "Status":  "Up",
+    "LinkSpeed":  "1 Gbps",
+    "DriverVersion":  "1153.12.20.223"
+}

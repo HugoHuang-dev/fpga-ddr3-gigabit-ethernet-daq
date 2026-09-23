@@ -1,0 +1,31 @@
+﻿**********************
+Windows PowerShell 脚本开始
+开始时间: 20260921233414
+用户名: HUGO\32035
+RunAs 用户: HUGO\32035
+配置名称: 
+计算机: HUGO (Microsoft Windows NT 10.0.26200.0)
+主机应用程序: powershell.exe -NoProfile -ExecutionPolicy Bypass -File archive\Project2_315M_USB_Kit\Run-315M-NoCapture.ps1
+进程 ID: 18128
+PSVersion: 5.1.26100.9444
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
+BuildVersion: 10.0.26100.9444
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+RESULTS: archive\Project2_315M_USB_Kit\results\20260921_233414_205
+This is the controlled 315 Mb/s NO-CAPTURE test.
+Use Windows performance power mode. Close WeChat, NetEase Music, browsers, downloads, cloud sync and unnecessary background programs.
+Confirm PktMon is stopped. Program fpga\project2_v5_315m.bit with the matching LTX.
+Press board RESET once, wait at least 5 seconds, then press Enter here. Do not press KEY0 yet.
+The receiver will prepare its buffers. Press KEY0 exactly once only after it prints ARMED.
+Project2 v5 Windows RIO PC monitor v6
+Receive priority: process=high thread=highest
+Preparing direct-index PRBS reference table ...
+Checking FPGA reachability at 192.168.1.11 ...
+FAIL: FPGA ping failed
+Receiver exit code: 1
+Press FPGA RESET once to stop/rearm transmission, then press Enter here.

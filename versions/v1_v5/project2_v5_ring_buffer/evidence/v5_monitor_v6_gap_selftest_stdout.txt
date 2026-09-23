@@ -1,0 +1,14 @@
+Project2 v5 Windows RIO PC monitor v6
+Receive priority: process=high thread=highest
+Preparing direct-index PRBS reference table ...
+Checking FPGA reachability at 127.0.0.1 ...
+PASS: FPGA ping reply received
+ARMED: listening on 127.0.0.1:6666
+Socket receive buffer: requested=67108864 bytes actual=67108864 bytes
+Receive engine: Windows Registered I/O, slots=16384 batch=256
+Press FPGA KEY0 once to start v5; press RESET after the monitor finishes.
+GAP: expected=100 received=102 missing=2
+FINAL: time=0.549s packets=298 rate=4.448 Mb/s missing=2 gap_events=1 max_gap=2 duplicate=0 out_of_order=0 malformed=0 metadata_errors=0 data_error_packets=0 data_error_bytes=0 receive_completion_errors=0 payload_bytes=305152 max_occupancy=1024
+JSON result written to evidence\v5_monitor_v6_gap_selftest.json
+Press FPGA RESET now to stop/rearm the continuous source.
+V5 DDR3 RING-BUFFER STREAM TEST FAILED

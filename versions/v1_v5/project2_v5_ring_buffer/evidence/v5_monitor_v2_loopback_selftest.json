@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "monitor_version": 2,
+  "duration_seconds": 1.005357300004107,
+  "packets_received": 183,
+  "payload_bytes": 187392,
+  "payload_rate_mbps": 1.4911474756227223,
+  "missing_packets": 0,
+  "duplicates": 0,
+  "out_of_order": 0,
+  "malformed": 0,
+  "metadata_errors": 0,
+  "data_error_packets": 0,
+  "data_error_bytes": 0,
+  "max_reported_occupancy_bytes": 1024,
+  "last_committed_bytes_low": 187392,
+  "socket_receive_buffer_requested_bytes": 33554432,
+  "socket_receive_buffer_actual_bytes": 33554432
+}

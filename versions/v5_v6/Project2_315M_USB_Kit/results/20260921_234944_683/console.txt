@@ -1,0 +1,644 @@
+﻿**********************
+Windows PowerShell 脚本开始
+开始时间: 20260921234944
+用户名: HUGO\32035
+RunAs 用户: HUGO\32035
+配置名称: 
+计算机: HUGO (Microsoft Windows NT 10.0.26200.0)
+主机应用程序: powershell.exe -NoProfile -ExecutionPolicy Bypass -File archive\Project2_315M_USB_Kit\Run-315M-NoCapture.ps1 -DurationSeconds 300
+进程 ID: 37080
+PSVersion: 5.1.26100.9444
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
+BuildVersion: 10.0.26100.9444
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+RESULTS: archive\Project2_315M_USB_Kit\results\20260921_234944_683
+This is the controlled 315 Mb/s NO-CAPTURE test for 300 seconds.
+Use Windows performance power mode. Close WeChat, NetEase Music, browsers, downloads, cloud sync and unnecessary background programs.
+Confirm PktMon is stopped. Program fpga\project2_v5_315m.bit with the matching LTX.
+Press board RESET once, wait at least 5 seconds, then press Enter here. Do not press KEY0 yet.
+The receiver will prepare its buffers. Press KEY0 exactly once only after it prints ARMED.
+Project2 v5 Windows RIO PC monitor v6
+Receive priority: process=high thread=highest
+Preparing direct-index PRBS reference table ...
+Checking FPGA reachability at 192.168.1.11 ...
+PASS: FPGA ping reply received
+ARMED: listening on 192.168.1.100:6666
+Socket receive buffer: requested=67108864 bytes actual=67108864 bytes
+Receive engine: Windows Registered I/O, slots=16384 batch=256
+Press FPGA KEY0 once to start v5; press RESET after the monitor finishes.
+STAT: time=   1.00s packets=38486 rate=315.220 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malforme
+d=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=   2.00s packets=76944 rate=315.084 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malforme
+d=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=   3.00s packets=115402 rate=315.038 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=   4.00s packets=153860 rate=315.015 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=   5.00s packets=192318 rate=315.001 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=   6.00s packets=230776 rate=314.992 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=   7.00s packets=269234 rate=314.985 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=   8.00s packets=307692 rate=314.980 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=   9.00s packets=346150 rate=314.977 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  10.00s packets=384608 rate=314.972 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  11.00s packets=423066 rate=314.971 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  12.00s packets=461524 rate=314.969 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  13.00s packets=499968 rate=314.964 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  14.00s packets=538426 rate=314.966 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  15.00s packets=576884 rate=314.964 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  16.00s packets=615342 rate=314.963 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  17.00s packets=653800 rate=314.962 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  18.01s packets=692258 rate=314.961 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  19.01s packets=730716 rate=314.960 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  20.01s packets=769174 rate=314.959 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  21.01s packets=807632 rate=314.959 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  22.01s packets=846090 rate=314.959 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  23.01s packets=884548 rate=314.958 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  24.01s packets=923006 rate=314.958 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  25.01s packets=961464 rate=314.957 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  26.01s packets=999922 rate=314.957 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malform
+ed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  27.01s packets=1038366 rate=314.956 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  28.01s packets=1076824 rate=314.956 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  29.01s packets=1115282 rate=314.956 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  30.01s packets=1153740 rate=314.955 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  31.01s packets=1192198 rate=314.955 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  32.01s packets=1230642 rate=314.952 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  33.01s packets=1269100 rate=314.954 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  34.01s packets=1307558 rate=314.954 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  35.01s packets=1346016 rate=314.954 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  36.01s packets=1384474 rate=314.954 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  37.01s packets=1422932 rate=314.954 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  38.01s packets=1461390 rate=314.953 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  39.01s packets=1499848 rate=314.953 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  40.01s packets=1538306 rate=314.953 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  41.01s packets=1576764 rate=314.953 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  42.01s packets=1615222 rate=314.953 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  43.01s packets=1653680 rate=314.952 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  44.01s packets=1692138 rate=314.952 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  45.01s packets=1730596 rate=314.952 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  46.01s packets=1769054 rate=314.952 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  47.01s packets=1807512 rate=314.952 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  48.01s packets=1845970 rate=314.952 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  49.01s packets=1884428 rate=314.952 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  50.01s packets=1922886 rate=314.951 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  51.02s packets=1961344 rate=314.951 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  52.02s packets=1999802 rate=314.951 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  53.02s packets=2038260 rate=314.951 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  54.02s packets=2076718 rate=314.951 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  55.02s packets=2115176 rate=314.951 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  56.02s packets=2153634 rate=314.951 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  57.02s packets=2192092 rate=314.951 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  58.02s packets=2230550 rate=314.951 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  59.02s packets=2269008 rate=314.951 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  60.02s packets=2307466 rate=314.950 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  61.02s packets=2345924 rate=314.951 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  62.02s packets=2384382 rate=314.951 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  63.02s packets=2422840 rate=314.950 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  64.02s packets=2461298 rate=314.950 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  65.02s packets=2499756 rate=314.950 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  66.02s packets=2538214 rate=314.950 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  67.02s packets=2576672 rate=314.950 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  68.02s packets=2615130 rate=314.950 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  69.02s packets=2653588 rate=314.950 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  70.02s packets=2692032 rate=314.950 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  71.02s packets=2730490 rate=314.950 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  72.02s packets=2768948 rate=314.950 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  73.02s packets=2807406 rate=314.950 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  74.02s packets=2845864 rate=314.950 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  75.02s packets=2884322 rate=314.950 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  76.02s packets=2922780 rate=314.950 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  77.02s packets=2961238 rate=314.950 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  78.02s packets=2999696 rate=314.950 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  79.02s packets=3038154 rate=314.950 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  80.02s packets=3076612 rate=314.950 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  81.02s packets=3115070 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  82.02s packets=3153528 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  83.03s packets=3191986 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  84.03s packets=3230444 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  85.03s packets=3268902 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  86.03s packets=3307360 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  87.03s packets=3345818 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  88.03s packets=3384276 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  89.03s packets=3422734 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  90.03s packets=3461192 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  91.03s packets=3499650 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  92.03s packets=3538108 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  93.03s packets=3576566 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  94.03s packets=3615024 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  95.03s packets=3653482 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  96.03s packets=3691940 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  97.03s packets=3730398 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  98.03s packets=3768856 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time=  99.03s packets=3807314 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 100.03s packets=3845772 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 101.03s packets=3884230 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 102.03s packets=3922688 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 103.03s packets=3961146 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 104.03s packets=3999604 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 105.03s packets=4038062 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 106.03s packets=4076520 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 107.03s packets=4114978 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 108.03s packets=4153436 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 109.03s packets=4191894 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 110.03s packets=4230352 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 111.03s packets=4268810 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 112.03s packets=4307268 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 113.03s packets=4345712 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 114.03s packets=4384170 rate=314.949 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 115.04s packets=4422628 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 116.04s packets=4461086 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 117.04s packets=4499544 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 118.04s packets=4538002 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 119.04s packets=4576460 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 120.04s packets=4614918 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 121.04s packets=4653376 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 122.04s packets=4691834 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 123.04s packets=4730292 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 124.04s packets=4768750 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 125.04s packets=4807208 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 126.04s packets=4845666 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 127.04s packets=4884124 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 128.04s packets=4922582 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 129.04s packets=4961040 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 130.04s packets=4999498 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 131.04s packets=5037956 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 132.04s packets=5076414 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 133.04s packets=5114872 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 134.04s packets=5153330 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 135.04s packets=5191788 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 136.04s packets=5230246 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 137.04s packets=5268704 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 138.04s packets=5307162 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 139.04s packets=5345620 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 140.04s packets=5384078 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 141.04s packets=5422536 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 142.04s packets=5460994 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 143.04s packets=5499452 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 144.04s packets=5537910 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 145.04s packets=5576368 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 146.05s packets=5614826 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 147.05s packets=5653284 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 148.05s packets=5691742 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 149.05s packets=5730200 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 150.05s packets=5768658 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 151.05s packets=5807116 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 152.05s packets=5845574 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 153.05s packets=5884032 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 154.05s packets=5922490 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 155.05s packets=5960948 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 156.05s packets=5999406 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 157.05s packets=6037864 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 158.05s packets=6076322 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 159.05s packets=6114780 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 160.05s packets=6153238 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 161.05s packets=6191696 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 162.05s packets=6230154 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 163.05s packets=6268612 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 164.05s packets=6307070 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 165.05s packets=6345528 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 166.05s packets=6383986 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 167.05s packets=6422444 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 168.05s packets=6460902 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 169.05s packets=6499360 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 170.05s packets=6537818 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 171.05s packets=6576276 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 172.05s packets=6614734 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 173.05s packets=6653192 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 174.05s packets=6691650 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 175.05s packets=6730108 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 176.05s packets=6768566 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 177.06s packets=6807024 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 178.06s packets=6845482 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 179.06s packets=6883940 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 180.06s packets=6922398 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 181.06s packets=6960856 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 182.06s packets=6999314 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 183.06s packets=7037772 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 184.06s packets=7076230 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 185.06s packets=7114688 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 186.06s packets=7153146 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 187.06s packets=7191604 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 188.06s packets=7230062 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 189.06s packets=7268520 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 190.06s packets=7306978 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 191.06s packets=7345436 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 192.06s packets=7383894 rate=314.948 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 193.06s packets=7422352 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 194.06s packets=7460810 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 195.06s packets=7499268 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 196.06s packets=7537726 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 197.06s packets=7576184 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 198.06s packets=7614642 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 199.06s packets=7653100 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 200.06s packets=7691558 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 201.06s packets=7730016 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 202.06s packets=7768474 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 203.06s packets=7806932 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 204.06s packets=7845390 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 205.06s packets=7883848 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 206.06s packets=7922306 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 207.06s packets=7960764 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 208.07s packets=7999222 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 209.07s packets=8037680 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 210.07s packets=8076138 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 211.07s packets=8114596 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 212.07s packets=8153054 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 213.07s packets=8191512 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 214.07s packets=8229970 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 215.07s packets=8268428 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 216.07s packets=8306886 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 217.07s packets=8345344 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 218.07s packets=8383802 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 219.07s packets=8422260 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 220.07s packets=8460718 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 221.07s packets=8499176 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 222.07s packets=8537634 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 223.07s packets=8576092 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 224.07s packets=8614550 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 225.07s packets=8653008 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 226.07s packets=8691466 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 227.07s packets=8729924 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 228.07s packets=8768382 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 229.07s packets=8806840 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 230.07s packets=8845298 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 231.07s packets=8883756 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 232.07s packets=8922214 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 233.07s packets=8960672 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 234.07s packets=8999116 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 235.07s packets=9037574 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 236.07s packets=9076032 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 237.07s packets=9114490 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 238.07s packets=9152948 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 239.07s packets=9191406 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 240.08s packets=9229864 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 241.08s packets=9268322 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 242.08s packets=9306780 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 243.08s packets=9345238 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 244.08s packets=9383696 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 245.08s packets=9422154 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 246.08s packets=9460612 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 247.08s packets=9499070 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 248.08s packets=9537528 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 249.08s packets=9575986 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 250.08s packets=9614444 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 251.08s packets=9652902 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 252.08s packets=9691360 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 253.08s packets=9729818 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 254.08s packets=9768276 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 255.08s packets=9806728 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 256.08s packets=9845192 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 257.08s packets=9883650 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 258.08s packets=9922108 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 259.08s packets=9960566 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 260.08s packets=9999024 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfor
+med=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 261.08s packets=10037482 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 262.08s packets=10075940 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 263.08s packets=10114398 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 264.08s packets=10152856 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 265.08s packets=10191314 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 266.08s packets=10229772 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 267.08s packets=10268230 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 268.08s packets=10306688 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 269.08s packets=10345146 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 270.08s packets=10383590 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 271.08s packets=10422048 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 272.09s packets=10460506 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 273.09s packets=10498964 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 274.09s packets=10537422 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 275.09s packets=10575880 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 276.09s packets=10614338 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 277.09s packets=10652796 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 278.09s packets=10691254 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 279.09s packets=10729712 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 280.09s packets=10768170 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 281.09s packets=10806628 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 282.09s packets=10845086 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 283.09s packets=10883544 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 284.09s packets=10922002 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 285.09s packets=10960460 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 286.09s packets=10998918 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 287.09s packets=11037376 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 288.09s packets=11075834 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 289.09s packets=11114292 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 290.09s packets=11152750 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 291.09s packets=11191208 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 292.09s packets=11229666 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 293.09s packets=11268124 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 294.09s packets=11306582 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 295.09s packets=11345040 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 296.09s packets=11383498 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 297.09s packets=11421956 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 298.09s packets=11460414 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+STAT: time= 299.09s packets=11498872 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malfo
+rmed=0 data_error_packets=0 metadata_errors=0 occupancy=262144/262144
+FINAL: time=300.000s packets=11533704 rate=314.947 Mb/s missing=0 gap_events=0 max_gap=0 duplicate=0 out_of_order=0 malf
+ormed=0 metadata_errors=0 data_error_packets=0 data_error_bytes=0 receive_completion_errors=0 payload_bytes=11810512896
+max_occupancy=262144
+JSON result written to archive\Project2_315M_USB_Kit\results\20260921
+_234944_683\rio_result.json
+Press FPGA RESET now to stop/rearm the continuous source.
+V5 DDR3 RING-BUFFER STREAM TEST PASSED
+Receiver exit code: 0
+Press FPGA RESET once to stop/rearm transmission, then press Enter here.
+**********************
+Windows PowerShell 脚本结束
+结束时间: 20260921235849
+**********************

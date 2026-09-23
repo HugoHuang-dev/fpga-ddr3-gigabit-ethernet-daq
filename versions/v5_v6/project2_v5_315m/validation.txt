@@ -1,0 +1,32 @@
+315 Mb/s candidate: offline validation only, no board pass yet.
+Functional change: top-level POST_READY_IDLE_CYCLES 3000 -> 1500; other RTL hashes unchanged.
+Vivado 2018.3 behavioral regression PASS: committed=76800 released=73728 occupancy=3072 stalls=17 packets=2.
+Regression includes ring flow, UDP ready and IPv4 checksum boundaries; compact test uses 8 pacing cycles.
+Implementation and bitstream generation succeeded.
+WNS +0.785 ns, TNS 0; WHS +0.051 ns, THS 0. User timing constraints met.
+LUT 11431; Registers 15121; BRAM Tile 23.
+DRC has no errors; inherited IP warnings retained.
+One inherited XDC critical warning: unsupported if command. POST_LINK_CDC_CONSTRAINT_APPLIED confirms the implementation hook applied the asynchronous clock groups.
+Additional routed-checkpoint report_bus_skew was generated in reports/bus_skew.rpt.
+BIT SHA256 D0592E0F9E2BE85CD02174CE5D47E32A47E3419713397EE4A6E7E0EA97DABAC4
+LTX SHA256 9C76CD050FE5EC07BB8F57763B124F2F55F324171469F33C22CD040041A01931
+Slack (MET) :             6.991ns  (requirement - actual skew)
+Slack (MET) :             7.040ns  (requirement - actual skew)
+Slack (MET) :             7.134ns  (requirement - actual skew)
+Slack (MET) :             7.250ns  (requirement - actual skew)
+Slack (MET) :             7.042ns  (requirement - actual skew)
+Slack (MET) :             7.015ns  (requirement - actual skew)
+Slack (MET) :             7.128ns  (requirement - actual skew)
+Slack (MET) :             7.137ns  (requirement - actual skew)
+Slack (MET) :             7.279ns  (requirement - actual skew)
+Slack (MET) :             7.080ns  (requirement - actual skew)
+Slack (MET) :             7.212ns  (requirement - actual skew)
+Slack (MET) :             7.210ns  (requirement - actual skew)
+Slack (MET) :             7.080ns  (requirement - actual skew)
+Slack (MET) :             7.016ns  (requirement - actual skew)
+Slack (MET) :             7.128ns  (requirement - actual skew)
+Slack (MET) :             7.007ns  (requirement - actual skew)
+Slack (MET) :             8.886ns  (requirement - actual skew)
+Slack (MET) :             9.212ns  (requirement - actual skew)
+Slack (MET) :             9.265ns  (requirement - actual skew)
+Slack (MET) :             9.180ns  (requirement - actual skew)

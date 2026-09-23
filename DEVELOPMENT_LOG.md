@@ -1,0 +1,75 @@
+# Project 2 V5–V9 Development and Validation Log
+
+This log continues the records for [V1 network connectivity](versions/v1_v5/project2_v1_udp/README.md), [V2 continuous test stream](versions/v1_v5/project2_v2_stream/README.md), [V3 standalone DDR3 self-test](versions/v1_v5/project2_v3_ddr3/README.md), and [V4 finite transfer](versions/v1_v5/project2_v4_ddr3_udp/evidence/development_log.md). It follows the V5–V9 implementation, fault isolation, retesting, and measured outcomes. Original projects, JSON results, screenshots, and ILA captures are linked through the [versioned evidence index](evidence/README.md).
+
+## V5
+
+### Continuous ring buffer and initial performance characterization
+
+V5 replaced V4's finite 64 KiB transfer with a continuous PRBS16 stream. Its 256 KiB DDR3 ring is divided into 1,024-byte slots. A write is committed only after a successful AXI `BVALID/BREADY` response; ring space is released only after an entire 1,024-byte read burst enters the transmit FIFO. Write/read pointers, cumulative committed/released bytes, occupancy, full/empty status, and stall counters are visible in ILA. Behavioral simulation deliberately filled a small ring and checked backpressure recovery before the implementation entered successive board tests. See the [V5 architecture and early record](versions/v1_v5/project2_v5_ring_buffer/README.md).
+
+| Stage | Observation, change, and outcome |
+| --- | --- |
+| First continuous run | After a packet-sequence gap, the Python receiver recomputed the PRBS reference packet by packet. The extra work limited the 60-second run to 21,232 received packets. The receiver was changed to precompute a PRBS period and index it directly by packet sequence; the new logic was also checked with a local loopback test. |
+| Second and third receiver iterations | Both the optimized Python receiver and native Winsock receiver stabilized near 325.4 Mb/s and 39.7 kpackets/s. Received packet formats and PRBS contents were correct. Reception then moved to Windows RIO with pre-posted buffers and batched completion processing. |
+| Fourth and fifth UDP timing investigations | The first RIO run still showed many sequence gaps. Inspection of `app_tx_ready` at the final beat showed that the packetizer could start the next packet while seeing an old high `ready` value. A state was added to wait for `ready` to fall and then rise; the fix was regressed against a realistic 50-cycle recovery model. The maximum individual gap fell substantially, while the host's sustained high-packet-rate limit still required investigation. |
+| Timing constraints and 315 Mb/s diagnostic | The asynchronous relationship between the 125 MHz and MIG UI domains was applied post-link, after the IP clocks existed; final WNS was positive. Adding an inter-packet interval shifted the 315 Mb/s test from a sustained reception bottleneck to occasional short gaps, helping separate protocol behavior from host scheduling. |
+| IPv4 checksum correction | At about 200 Mb/s, two gaps recurred once per 16-bit IP-ID cycle. Exhaustive boundary checks located truncated carry folding at `0x72FA/0x72FB`. Folding the carry a second time removed the periodic gaps; a boundary regression was added. |
+| PRBS reset consistency | One run had continuous packet sequence numbers but an incorrect PRBS phase across entire packets. The PRBS source and ring controller were aligned to the MIG/UI reset boundary. A subsequent clean-reset run again passed byte-for-byte validation. |
+| Receiver-boundary comparisons | Candidate runs at 200, 315, 248, and 225 Mb/s were compared with PktMon and ILA sticky flags. NIC, cable, and interface checks, a separate receive host, and different system loads isolated the effects of power profile, background software, and USB NIC receive scheduling on instantaneous headroom. |
+| Stable 315 Mb/s point | With high-performance power mode, packet capture stopped, and background load controlled, three consecutive 60-second runs and one 300-second run passed. Missing, out-of-order, malformed, and PRBS-corrupt packet counts were all zero. |
+| Approximately 400 Mb/s step | The 60-second run reached **399.408 Mb/s**, with all receiver error checks at zero. This image retained 39 ILA probes for the formal ring-buffer captures. |
+| MAX short run | Removing extra inter-packet throttling produced **4,981,998 packets** and **5,101,565,952 bytes** checked byte-for-byte in 60 seconds, averaging **680.207 Mb/s** with zero missing or erroneous packets. |
+| MAX one-hour run | The same image ran for 3,600 seconds: **298,914,974 packets**, **306,088,933,376 verified bytes**, and **680.198 Mb/s** on average. Twenty-five gaps totaled 660 packets, yielding **99.999779%** packet delivery. Received packets had no content corruption. The original verdict and counters remain in the [endurance JSON](versions/v5_v6/Project2_MAX_USB_Kit/results/20260922_004730_216/rio_result.json). |
+| Four ILA capture groups | The approximately 400 Mb/s image captured AXI write commitment, release after a complete read burst, 256 KiB pointer wraparound, and steady operation. `fatal_error` and FIFO error flags stayed at zero. Write stalls increased when the ring filled, confirming hardware backpressure. See the [V5 evidence index](evidence/V5.md). |
+
+The early [V5 version record](versions/v1_v5/project2_v5_ring_buffer/README.md) focuses on ring-buffer design, simulation, and initial diagnosis. The later [315M](versions/v5_v6/project2_v5_315m/README.md), [400M](versions/v5_v6/project2_v5_400m/README.md), and [MAX](versions/v5_v6/project2_v5_max_unpaced/README.md) records document the stable operating point, short-term peak, and one-hour measurement. This section combines both phases in experimental order; the corresponding raw JSON is authoritative for every number.
+
+## V6
+
+### Concurrent ingress, DDR, and transmit pipeline
+
+V6 added a 4 KiB ingress FIFO to the V5 continuous path, allowed DDR reads and writes to overlap, and expanded the transmit FIFO to eight packets. Ingress pauses at 3 KiB and resumes at 1 KiB. DDR drain begins at 64 KiB occupancy and stops at 16 KiB. Simulation covered both watermarks, concurrency, and backpressure; the Vivado implementation achieved **+0.887 ns WNS**.
+
+A 60-second board run received **2,925,356 packets** and **2,995,564,544 bytes** at an average **399.405 Mb/s**, with all receiver error checks at zero. Seven ILA triggers and 14 screenshots verified ingress hysteresis, 64 KiB drain start, write suspension at a full ring, overlapping DDR reads/writes, read-burst commitment, and UDP packet completion. Internal overflow, underflow, and fatal-error indicators stayed at zero. See the [V6 project record](versions/v5_v6/project2_v6_pipeline/README.md) and [image index](evidence/V6.md).
+
+V6 retained V5's ring-ownership rules while decoupling ingress, storage, and transmission timing. A 60-second stream first established throughput and packet correctness. The ingress watermark, DDR high watermark, full-ring, and read/write-overlap triggers were then armed in sequence. Their waveforms show the actual order of backpressure, recovery, complete-packet commitment, and UDP consumption. The [ILA capture procedure and results](versions/v5_v6/ILA_V6_FOUR_CAPTURE_GUIDE.md) retain probe and trigger settings.
+
+## V7
+
+### UART control and configurable transfer
+
+V7 added UART commands and an atomic status snapshot to the V6 data path: START/STOP, source selection, rate control, 256/512/1,024-byte payloads, finite/continuous operation, counter clear, and READ_STATUS. A single 1,024-byte DDR read burst can produce four, two, or one UDP packet; DDR ring space is still released after the complete burst. Behavioral simulation covered command replies, CRC, busy-state rejection, exact finite stopping, and dynamic packetization. Implemented WNS was **+0.456 ns**.
+
+Board testing began with initial status and configuration replies, then exercised all three packet lengths, a 12.5 Mword/s limit near 200 Mb/s, a 1,048,576-word finite run, and invalid-command protection. Finite mode produced exactly **8,192 packets**; after stopping, `finite_done=1` and the ingress and DDR rings were empty. The final 300-second maximum-rate test received **14,626,556 packets** and **14,977,593,344 bytes** at an average **399.402 Mb/s**, with zero missing, out-of-order, or PRBS-corrupt packets. See the [V7 functional description](versions/v7_v9/project2_v7_uart_control/README.md) and [staged evidence](versions/v7_v9/project2_v7_uart_control/evidence/V7_STAGE3_STAGE7_EVIDENCE_20260922.md).
+
+| Board-test stage | Measured result and engineering conclusion |
+| --- | --- |
+| Initial UART control checks | The COM4 status-frame CRC was correct and reported V7, calibrated MIG, and empty ingress/DDR queues. Counter clear, source/rate/length/mode configuration all returned OK. The receiver was initially `ARMED`, but START had not been sent from the second terminal, causing a first-packet timeout. Coordinating the two terminals allowed testing to continue with the same BIT. See [initial status and operations](versions/v7_v9/project2_v7_uart_control/evidence/V7_STAGE1_STAGE2_EVIDENCE_20260922.md). |
+| Three dynamic packet lengths | A 512 B, 60-second run received 3,898,575 packets at 266.141 Mb/s. A 256 B, 10-second run received 779,493 at 159.634 Mb/s. A 1,024 B, 10-second run received 487,592 at 399.426 Mb/s. Packet length, sequence, and PRBS content were correct in all three. See the [stage 1–2 results](versions/v7_v9/project2_v7_uart_control/evidence/V7_STAGE1_STAGE2_EVIDENCE_20260922.md). |
+| Rate limiting, finite mode, and command protection | A 12.5 Mword/s setting measured 200.028 Mb/s; finite mode emitted exactly 1,048,576 words. An invalid source returned UNSUPPORTED, a length change while running returned BUSY, and a bad CRC received no reply. Status counters recorded the rejection and CRC error. See the [stage 3–7 results](versions/v7_v9/project2_v7_uart_control/evidence/V7_STAGE3_STAGE7_EVIDENCE_20260922.md). |
+| Slow-source diagnosis and final run | `tx_underflow` was 12,952 under deliberate rate limiting and 1 at 1,000 words/s. In this RTL, the counter represents waits for a complete packet between transmissions; the PC data remained continuous and valid. After clearing counters, the final 60- and 300-second maximum-rate runs passed with `tx_underflow=0`. |
+
+## V8
+
+### Four-channel on-chip XADC acquisition
+
+V8 connected Project 1's on-chip XADC to the same `valid/ready → FIFO → DDR3 → UDP → PC` path. Source 0 retained the high-speed PRBS16 test. Source 1 sampled temperature, VCCINT, VCCAUX, and VCCBRAM in sequence. Each 16-bit record contains a channel identifier and 12-bit raw value; the receiver checks channel order, record format, and per-channel counts. MIG receives temperature data from the same XADC, and the routed utilization report shows **1/1 XADC**. Simulation passed and implemented WNS was **+0.544 ns**.
+
+Integration first resolved competition for the device's single XADC resource. Instantiating an XADC in both the acquisition module and the original MIG configuration could synthesize but not place. The final acquisition module supplies temperature data to MIG's `device_temp_i`, preserving temperature compensation while providing four-channel data. The UART status response grew from 61 to 74 bytes with an XADC valid mask, dropped-sample counter, and latest raw values for all four channels. The PC receiver selects PRBS or XADC checks by source. A conditional Tcl construct unsuitable for XDC was moved into an implementation hook; timing and bus-skew checks passed after rerouting. See the [V8 project description](versions/v7_v9/project2_v8_xadc_acquisition/README.md).
+
+The source 0 board short run reached about **399.422 Mb/s**. For source 1, the 60-second continuous run received **73,728 records**. Finite mode received exactly **32,768 records**, 8,192 per channel. The 300-second continuous run received **319,488 records**, 79,872 per channel. All three XADC gates passed channel-order, format, continuity, and dropped-sample checks. See the [V8 description](versions/v7_v9/project2_v8_xadc_acquisition/README.md) and [board evidence](versions/v7_v9/project2_v8_xadc_acquisition/evidence/V8_BOARD_VALIDATION_EVIDENCE_20260922.md).
+
+Source 1 generates about 1,000 16-bit records per second. The first packet appears only after DDR occupancy reaches the 64 KiB drain threshold, roughly 32.8 seconds later. The 60- and 300-second status snapshots recorded `tx_underflow=6/13` for inter-batch waits; PC sequence, data, channel order, and completion checks still passed. Occupancy and XADC drop count were zero after STOP. The finite run had `tx_underflow=0`.
+
+## V9
+
+### Full validation and one-hour endurance run
+
+V9 added a **64-bit first-sample index** to the UDP header. The PC checks packet sequence and sample index independently, alongside PRBS or XADC content. ILAs cover the acquisition, MIG UI, and PHY RX clock domains. ModelSim **3/3** and receiver fault-injection self-tests **10/10** passed; implemented WNS was **+0.292 ns** with zero DRC errors. See the [simulation and implementation record](versions/v7_v9/project2_v9_full_validation/evidence/V9_PREBOARD_EVIDENCE_20260923.md).
+
+On September 23, board Gate 1 passed a 60-second PRBS16 run at **397.855 Mb/s**; Gate 2 passed a finite **32,768-record** XADC run; and Gate 3 passed a 300-second XADC run. Four native ILA captures recorded acquisition handshakes, PHY RX activity, DDR write commitment, and a separate `packet_done` trigger. The supplementary capture validates a local event and is not presented as synchronized with the earlier long PC run. See the [board evidence index](versions/v7_v9/project2_v9_full_validation/evidence/board_20260923/V9_BOARD_EVIDENCE_FINAL.md).
+
+Local gates first completed three ModelSim regressions, ten PC receiver fault-injection cases, and routed implementation. Board gates then proceeded through high-speed PRBS, finite XADC, continuous XADC, ILA, and the one-hour endurance run. ILAs sit in `clk_125m`, MIG `ui_clk`, and `phy_rx_clk` domains. After preserving the DDR commitment waveform, the UI-domain ILA was re-armed separately for `packet_done`; this local trace shows packet sequence 0→1 and first-word index 0→512. See the [simulation/implementation record](versions/v7_v9/project2_v9_full_validation/evidence/V9_PREBOARD_EVIDENCE_20260923.md) and [four ILA files](versions/v7_v9/project2_v9_full_validation/evidence/board_20260923/V9_BOARD_EVIDENCE_FINAL.md).
+
+Gate 5 completed **3,600 seconds**, receiving **174,834,426 packets** and **179,030,452,224 bytes** at an average **397.845 Mb/s** and **99.998957%** packet delivery. The receiver recorded **30 gaps totaling 1,824 missing packets**. Every received packet passed PRBS, format, and metadata checks. The original zero-loss criterion was not met; the raw `passed=false` verdict and full counters are preserved in the [Gate 5 JSON](versions/v7_v9/project2_v9_full_validation/evidence/board_20260923/results/v9_gate5_prbs_1024B_25M_3600s.json).

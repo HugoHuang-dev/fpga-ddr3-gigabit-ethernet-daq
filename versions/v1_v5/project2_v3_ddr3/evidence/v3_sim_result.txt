@@ -1,0 +1,8 @@
+Vivado XSim 2018.3 behavioral simulation
+Date: 2026-09-19
+
+V3 AXI SELFTEST SIM PASSED: writes=48 reads=48 errors=0
+
+The simulation uses TEST_BEATS=16 and runs all three patterns:
+address-data, walking-bit, and PRBS. Therefore 3 x 16 = 48 writes and
+3 x 16 = 48 reads are expected.

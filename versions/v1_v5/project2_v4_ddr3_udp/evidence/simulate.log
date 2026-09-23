@@ -1,0 +1,4 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+V4 SOURCE/PACKETIZER SIM PASSED: words=16 packets=2 errors=0
+$finish called at time : 1665 ns : File "V:/outputs/project2_v4_ddr3_udp/sim/tb_v4_source_packetizer.v" Line 133

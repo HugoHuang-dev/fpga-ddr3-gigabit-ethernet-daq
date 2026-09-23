@@ -1,0 +1,24 @@
+﻿
+
+Name                 : 以太网
+InterfaceDescription : Realtek USB GbE Family Controller
+Status               : Up
+LinkSpeed            : 1 Gbps
+
+Name                 : vgate0
+InterfaceDescription : Rust Wintun Tunnel Tunnel
+Status               : Up
+LinkSpeed            : 100 Gbps
+
+Name                 : WLAN
+InterfaceDescription : MediaTek Wi-Fi 6E MT7922 (RZ616) 160MHz Wireless LAN Card
+Status               : Up
+LinkSpeed            : 866.7 Mbps
+
+Name                 : 蓝牙网络连接
+InterfaceDescription : Bluetooth Device (Personal Area Network)
+Status               : Disconnected
+LinkSpeed            : 3 Mbps
+
+
+

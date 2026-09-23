@@ -1,0 +1,10 @@
+Project2 V8 final behavioral simulation summary
+Date: 2026-09-22
+
+PASS: V8 Project1 XADC wrapper valid/ready, channel order and finite count
+V8 PACKETIZER SIM PASSED: source-tagged burst -> 4 x 256-byte packets
+V8 UART CONTROL SIM PASSED: bytes=145 rejects=1 crc_errors=1
+Vivado XSim V8 UART control regression: PASS
+
+The final Vivado implementation and board deliverables were built after these
+functional regressions. Board validation remains pending.

@@ -1,0 +1,113 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Sep 22 19:36:33 2026
+# Process ID: 26844
+# Current directory: archive/project2_v8_xadc_acquisition
+# Command line: vivado.exe -mode batch -source .\scripts\run_sim.tcl -log .\run_sim_v8.log -journal .\run_sim_v8.jou
+# Log file: archive/project2_v8_xadc_acquisition/./run_sim_v8.log
+# Journal file: archive/project2_v8_xadc_acquisition\.\run_sim_v8.jou
+#-----------------------------------------------------------
+source {.\scripts\run_sim.tcl}
+# set script_dir [file dirname [file normalize [info script]]]
+# set root_dir [file normalize [file join $script_dir ..]]
+# set project_file [file join $root_dir build project2_v8_xadc_acquisition.xpr]
+# if {![file exists $project_file]} { error "Run create_project.tcl first" }
+# open_project $project_file
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'archive/project2_v8_xadc_acquisition/build'
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+# set_property top tb_v8_uart_control [get_filesets sim_1]
+# set_property xsim.simulate.runtime {all} [get_filesets sim_1]
+# launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'archive/project2_v8_xadc_acquisition/build/project2_v8_xadc_acquisition.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'archive/project2_v8_xadc_acquisition/build/project2_v8_xadc_acquisition.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_v8_uart_control' in fileset 'sim_1'...
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'archive/project2_v8_xadc_acquisition/ip/c_shift_ram_0/c_shift_ram_0.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'archive/project2_v8_xadc_acquisition/ip/clk_wiz_0/clk_wiz_0.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'archive/project2_v8_xadc_acquisition/ip/fifo_w144xd512/fifo_w144xd512.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'archive/project2_v8_xadc_acquisition/ip/fifo_w17xd16/fifo_w17xd16.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'archive/project2_v8_xadc_acquisition/ip/fifo_w32xd16/fifo_w32xd16.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'archive/project2_v8_xadc_acquisition/ip/fifo_w32xd16_async/fifo_w32xd16_async.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'archive/project2_v8_xadc_acquisition/ip/fifo_w40xd16/fifo_w40xd16.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'archive/project2_v8_xadc_acquisition/ip/fifo_w64xd16/fifo_w64xd16.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'archive/project2_v8_xadc_acquisition/ip/fifo_w81xd16/fifo_w81xd16.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'archive/project2_v8_xadc_acquisition/ip/fifo_w9xd2048/fifo_w9xd2048.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'archive/project2_v8_xadc_acquisition/ip/fifo_w9xd4096/fifo_w9xd4096.xml'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'archive/project2_v8_xadc_acquisition/build/project2_v8_xadc_acquisition.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_v8_uart_control_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "archive/project2_v8_xadc_acquisition/rtl/crc16_d8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crc16_d8
+INFO: [VRFC 10-2263] Analyzing Verilog file "archive/project2_v8_xadc_acquisition/rtl/uart_dma.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_dma
+INFO: [VRFC 10-2263] Analyzing Verilog file "archive/project2_v8_xadc_acquisition/rtl/uart_rx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-2263] Analyzing Verilog file "archive/project2_v8_xadc_acquisition/rtl/uart_tx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing Verilog file "archive/project2_v8_xadc_acquisition/rtl/v8_uart_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module v8_uart_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "archive/project2_v8_xadc_acquisition/sim/tb_v8_uart_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_v8_uart_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "archive/project2_v8_xadc_acquisition/build/project2_v8_xadc_acquisition.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'archive/project2_v8_xadc_acquisition/build/project2_v8_xadc_acquisition.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto abe99492022945cf9b304db05a69ed1c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_v8_uart_control_behav xil_defaultlib.tb_v8_uart_control xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "archive/project2_v8_xadc_acquisition/rtl/crc16_d8.v" Line 1. Module crc16_d8 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "archive/project2_v8_xadc_acquisition/rtl/crc16_d8.v" Line 1. Module crc16_d8 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.uart_tx(CLK_FREQ=1000000,BAUD_RA...
+Compiling module xil_defaultlib.uart_rx(CLK_FREQ=1000000,BAUD_RA...
+Compiling module xil_defaultlib.uart_dma(CLK_FREQ=1000000,BAUD_R...
+Compiling module xil_defaultlib.crc16_d8
+Compiling module xil_defaultlib.v8_uart_control(CLK_HZ=1000000,B...
+Compiling module xil_defaultlib.tb_v8_uart_control
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_v8_uart_control_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source archive/project2_v8_xadc_acquisition/build/project2_v8_xadc_acquisition.sim/sim_1/behav/xsim/xsim.dir/tb_v8_uart_control_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Sep 22 19:36:48 2026...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'archive/project2_v8_xadc_acquisition/build/project2_v8_xadc_acquisition.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_v8_uart_control_behav -key {Behavioral:sim_1:Functional:tb_v8_uart_control} -tclbatch {tb_v8_uart_control.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source tb_v8_uart_control.tcl
+## current_wave_config
+V8 UART CONTROL SIM PASSED: bytes=145 rejects=1 crc_errors=1
+$finish called at time : 291935 ns : File "archive/project2_v8_xadc_acquisition/sim/tb_v8_uart_control.v" Line 201
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_v8_uart_control_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for all
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 368.105 ; gain = 14.555
+# close_sim
+INFO: [Simtcl 6-16] Simulation closed
+# close_project
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 22 19:36:52 2026...

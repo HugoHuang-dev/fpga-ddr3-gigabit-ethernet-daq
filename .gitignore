@@ -1,0 +1,44 @@
+# Vivado and simulation workspaces (sources, evidence, and releases are tracked)
+**/.Xil/
+**/build/
+!**/evidence/build/
+!**/evidence/build/**
+**/*.srcs/
+**/*.runs/
+**/*.cache/
+**/*.gen/
+**/*.ip_user_files/
+**/*.hw/
+**/*.sim/
+**/modelsim_work_*/
+**/.modelsim_work/
+**/xsim.dir/
+**/work/
+*.xpr
+*.jou
+vivado*.log
+webtalk*.log
+*.dcp
+*.rpx
+*.wdb
+*.wcfg
+*.vvp
+*.obj
+*.pb
+*.str
+
+# Generated IP containers are represented by compact XCI configurations
+*.xcix
+
+# Large packet-capture traces are retained outside this repository
+*.etl
+*.pcapng
+
+# Local host and editor files
+**/__pycache__/
+*.pyc
+*.tmp
+*.bak
+*~
+.DS_Store
+Thumbs.db

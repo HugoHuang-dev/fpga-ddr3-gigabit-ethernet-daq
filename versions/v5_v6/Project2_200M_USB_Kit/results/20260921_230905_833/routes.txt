@@ -1,0 +1,379 @@
+﻿
+
+DestinationPrefix : 255.255.255.255/32
+InterfaceIndex    : 16
+InterfaceAlias    : 以太网
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 25
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 255.255.255.255/32
+InterfaceIndex    : 11
+InterfaceAlias    : 本地连接* 2
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 25
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 255.255.255.255/32
+InterfaceIndex    : 8
+InterfaceAlias    : 本地连接* 1
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 25
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 255.255.255.255/32
+InterfaceIndex    : 13
+InterfaceAlias    : vgate0
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 5
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 255.255.255.255/32
+InterfaceIndex    : 7
+InterfaceAlias    : WLAN
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 35
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 255.255.255.255/32
+InterfaceIndex    : 5
+InterfaceAlias    : 蓝牙网络连接
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 65
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 255.255.255.255/32
+InterfaceIndex    : 1
+InterfaceAlias    : Loopback Pseudo-Interface 1
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 75
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 224.0.0.0/4
+InterfaceIndex    : 16
+InterfaceAlias    : 以太网
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 25
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 224.0.0.0/4
+InterfaceIndex    : 11
+InterfaceAlias    : 本地连接* 2
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 25
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 224.0.0.0/4
+InterfaceIndex    : 8
+InterfaceAlias    : 本地连接* 1
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 25
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 224.0.0.0/4
+InterfaceIndex    : 13
+InterfaceAlias    : vgate0
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 5
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 224.0.0.0/4
+InterfaceIndex    : 7
+InterfaceAlias    : WLAN
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 35
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 224.0.0.0/4
+InterfaceIndex    : 5
+InterfaceAlias    : 蓝牙网络连接
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 65
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 224.0.0.0/4
+InterfaceIndex    : 1
+InterfaceAlias    : Loopback Pseudo-Interface 1
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 75
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 192.168.50.255/32
+InterfaceIndex    : 7
+InterfaceAlias    : WLAN
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 35
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 192.168.50.6/32
+InterfaceIndex    : 7
+InterfaceAlias    : WLAN
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 35
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 192.168.50.0/24
+InterfaceIndex    : 7
+InterfaceAlias    : WLAN
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 35
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 192.168.1.255/32
+InterfaceIndex    : 16
+InterfaceAlias    : 以太网
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 25
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 192.168.1.100/32
+InterfaceIndex    : 16
+InterfaceAlias    : 以太网
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 25
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 192.168.1.0/24
+InterfaceIndex    : 16
+InterfaceAlias    : 以太网
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 25
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 172.30.212.87/32
+InterfaceIndex    : 13
+InterfaceAlias    : vgate0
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 5
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 127.255.255.255/32
+InterfaceIndex    : 1
+InterfaceAlias    : Loopback Pseudo-Interface 1
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 75
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 127.0.0.1/32
+InterfaceIndex    : 1
+InterfaceAlias    : Loopback Pseudo-Interface 1
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 75
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 127.0.0.0/8
+InterfaceIndex    : 1
+InterfaceAlias    : Loopback Pseudo-Interface 1
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 0.0.0.0
+Publish           : No
+State             : Alive
+RouteMetric       : 256
+InterfaceMetric   : 75
+Protocol          : Local
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+PolicyStore       : ActiveStore
+
+DestinationPrefix : 0.0.0.0/0
+InterfaceIndex    : 7
+InterfaceAlias    : WLAN
+CompartmentId     : 1
+AddressFamily     : IPv4
+NextHop           : 192.168.50.1
+Publish           : No
+State             : Alive
+RouteMetric       : 0
+InterfaceMetric   : 35
+Protocol          : NetMgmt
+ValidLifetime     : 18:17:02
+PreferredLifetime : 18:17:02
+PolicyStore       : ActiveStore
+
+
+

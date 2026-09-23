@@ -1,0 +1,102 @@
+﻿
+
+IPAddress         : 169.254.57.171
+InterfaceIndex    : 11
+InterfaceAlias    : 本地连接* 2
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 16
+PrefixOrigin      : WellKnown
+SuffixOrigin      : Link
+AddressState      : Tentative
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 169.254.73.15
+InterfaceIndex    : 5
+InterfaceAlias    : 蓝牙网络连接
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 16
+PrefixOrigin      : WellKnown
+SuffixOrigin      : Link
+AddressState      : Tentative
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 169.254.208.246
+InterfaceIndex    : 8
+InterfaceAlias    : 本地连接* 1
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 16
+PrefixOrigin      : WellKnown
+SuffixOrigin      : Link
+AddressState      : Tentative
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 192.168.50.6
+InterfaceIndex    : 7
+InterfaceAlias    : WLAN
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 24
+PrefixOrigin      : Dhcp
+SuffixOrigin      : Dhcp
+AddressState      : Preferred
+ValidLifetime     : 23:55:44
+PreferredLifetime : 23:55:44
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 172.30.212.87
+InterfaceIndex    : 17
+InterfaceAlias    : vgate0
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 32
+PrefixOrigin      : Manual
+SuffixOrigin      : Manual
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 192.168.1.100
+InterfaceIndex    : 16
+InterfaceAlias    : 以太网
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 24
+PrefixOrigin      : Manual
+SuffixOrigin      : Manual
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 127.0.0.1
+InterfaceIndex    : 1
+InterfaceAlias    : Loopback Pseudo-Interface 1
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 8
+PrefixOrigin      : WellKnown
+SuffixOrigin      : WellKnown
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+
+

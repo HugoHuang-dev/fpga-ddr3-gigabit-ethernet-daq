@@ -1,0 +1,27 @@
+Project2 V9 Windows RIO monitor build and self-test
+Timestamp: 2026-09-23 00:51:43 +08:00
+Compiler environment: Microsoft Visual Studio 18 Community x64
+Build command: .\build_udp_v9_monitor.ps1 -RunSelfTest
+
+udp_v9_monitor_rio.cpp
+Built udp_v9_monitor_rio.exe
+Preparing direct-index PRBS reference table ...
+SELF-TEST normal source0 stream             PASS
+SELF-TEST normal source1/XADC stream        PASS
+SELF-TEST packet-sequence gap injection     PASS
+SELF-TEST sample-index gap injection        PASS
+SELF-TEST payload-byte corruption injection PASS
+SELF-TEST header-version injection          PASS
+SELF-TEST header-length injection           PASS
+SELF-TEST XADC format/order injection       PASS
+SELF-TEST nonzero first-sequence origin     PASS
+SELF-TEST nonzero first-sample origin       PASS
+V9 MONITOR SELF-TEST PASSED
+
+Artifacts:
+- udp_v9_monitor_rio.cpp: 49076 bytes
+  SHA-256: 19A610F5FEB3EA33B26ED21CDCB1F0F3A4E9232046E752BA7E388E104DE9A94E
+- udp_v9_monitor_rio.exe: 355328 bytes
+  SHA-256: B9A71E1C5D3A3CA1E2EC6FCA4A6DE2DB7E423E675CB3D3CE222722074FC63E72
+- build_udp_v9_monitor.ps1: 1420 bytes
+  SHA-256: CF016FD7BA8A62F0EF42DE1BE2076F58D61D951C1562AB9EC0B5DC83DCC1007F

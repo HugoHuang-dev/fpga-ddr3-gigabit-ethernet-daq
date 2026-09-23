@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Sep 22 19:55:37 2026
+# Process ID: 27844
+# Current directory: archive/project2_v8_xadc_acquisition
+# Command line: vivado.exe -mode batch -source V:\outputs\project2_v8_xadc_acquisition\scripts\build_bitstream.tcl -log V:\outputs\project2_v8_xadc_acquisition\build_bitstream_v8_shared_xadc.log -journal V:\outputs\project2_v8_xadc_acquisition\build_bitstream_v8_shared_xadc.jou
+# Log file: V:/outputs/project2_v8_xadc_acquisition/build_bitstream_v8_shared_xadc.log
+# Journal file: V:\outputs\project2_v8_xadc_acquisition\build_bitstream_v8_shared_xadc.jou
+#-----------------------------------------------------------
+source {V:\outputs\project2_v8_xadc_acquisition\scripts\build_bitstream.tcl}
+# set script_dir [file dirname [file normalize [info script]]]
+# set root_dir [file normalize [file join $script_dir ..]]
+# file mkdir [file join $root_dir reports]
+# open_project [file join $root_dir build project2_v8_xadc_acquisition.xpr]
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+# reset_run synth_1
+# launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'V:/outputs/project2_v8_xadc_acquisition/ip/c_shift_ram_0/c_shift_ram_0.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'V:/outputs/project2_v8_xadc_acquisition/ip/fifo_w32xd16_async/fifo_w32xd16_async.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'V:/outputs/project2_v8_xadc_acquisition/ip/fifo_w32xd16/fifo_w32xd16.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'V:/outputs/project2_v8_xadc_acquisition/ip/fifo_w9xd2048/fifo_w9xd2048.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'V:/outputs/project2_v8_xadc_acquisition/ip/fifo_w81xd16/fifo_w81xd16.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'V:/outputs/project2_v8_xadc_acquisition/ip/fifo_w9xd4096/fifo_w9xd4096.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'V:/outputs/project2_v8_xadc_acquisition/ip/fifo_w64xd16/fifo_w64xd16.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'V:/outputs/project2_v8_xadc_acquisition/ip/fifo_w17xd16/fifo_w17xd16.xci' is already up-to-date
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'mig_7series_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'mig_7series_0'...
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'V:/outputs/project2_v8_xadc_acquisition/ip/fifo_w144xd512/fifo_w144xd512.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'V:/outputs/project2_v8_xadc_acquisition/ip/fifo_w40xd16/fifo_w40xd16.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'V:/outputs/project2_v8_xadc_acquisition/ip/clk_wiz_0/clk_wiz_0.xci' is already up-to-date
+[Tue Sep 22 19:55:48 2026] Launched ila_v6_synth_1, synth_1...
+Run output will be captured here:
+ila_v6_synth_1: V:/outputs/project2_v8_xadc_acquisition/build/project2_v8_xadc_acquisition.runs/ila_v6_synth_1/runme.log
+synth_1: V:/outputs/project2_v8_xadc_acquisition/build/project2_v8_xadc_acquisition.runs/synth_1/runme.log
+[Tue Sep 22 19:55:48 2026] Launched impl_1...
+Run output will be captured here: V:/outputs/project2_v8_xadc_acquisition/build/project2_v8_xadc_acquisition.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 543.031 ; gain = 189.938
+# wait_on_run impl_1
+[Tue Sep 22 19:55:48 2026] Waiting for impl_1 to finish...

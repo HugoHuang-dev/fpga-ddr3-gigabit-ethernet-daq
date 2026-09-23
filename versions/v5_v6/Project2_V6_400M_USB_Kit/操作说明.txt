@@ -1,0 +1,20 @@
+Project2 V6 连续 DDR3→UDP 流水线：400 Mb/s 首次上板测试
+
+本版本已完成行为仿真、综合、布局布线和时序检查。第一次只跑 60 秒，
+用于确认新增入口 FIFO、DDR 高低水位和 8 包出口 FIFO在真板上的配合。
+
+1. Windows 使用高性能模式，关闭微信、网易云音乐、浏览器下载、网盘同步等后台程序。
+2. 在 Vivado Hardware Manager 中把以下文件作为一对下载：
+   fpga\project2_v6_400m.bit
+   fpga\project2_v6_400m.ltx
+3. 下载后按一次开发板 RESET，等待至少 5 秒，先不要按 KEY0。
+4. 右键 01_Run_V6_400M_60s_NoCapture.cmd，选择“以管理员身份运行”。
+5. 按窗口提示继续；接收器打印 ARMED 后，按一次 KEY0。
+6. 等待 60 秒结束，再按一次 RESET，然后回到窗口按 Enter。
+7. 保留并发回新生成的整个 results\日期时间 文件夹。
+
+严格 PASS 条件：missing、gap_events、duplicate、out_of_order、malformed、
+metadata_errors、data_error_packets、data_error_bytes、receive_completion_errors 全为 0。
+
+说明：V6 改变的是 FPGA 内部流水线。UDP 包布局继续使用 P2V5/0x05 标识，
+因此沿用已经验证过的 udp_v5_monitor_rio.exe；这不代表烧录的是 V5 BIT。

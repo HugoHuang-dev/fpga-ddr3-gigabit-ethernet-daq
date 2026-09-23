@@ -1,0 +1,31 @@
+Project2 约 315 Mb/s 无抓包受控测试
+
+本包用于验证“清理后台 + Windows 性能模式”条件下，315 Mb/s 候选版能否零丢包。
+它不会启动 PktMon，以免抓包增加主机负载。
+
+准备：
+1. 保持开发板供电，笔记本通过下载器连接开发板，主机通过网线连接开发板。
+2. 主机有线网卡保持 192.168.1.100 / 255.255.255.0；默认网关和 DNS 留空。
+3. Windows 切换到性能模式。
+4. 完全退出微信、网易云音乐、浏览器下载、网盘同步和其他不必要后台程序。
+
+烧录：
+1. 在笔记本 Vivado Hardware Manager 中 Program Device。
+2. Bitstream 选择 fpga\project2_v5_315m.bit。
+3. Debug probes 选择 fpga\project2_v5_315m.ltx。
+4. Program 成功后按一次开发板 RESET，等待至少 5 秒。暂时不要按 KEY0。
+
+测试：
+1. 在主机右键 01_Run_315M_NoCapture.cmd，选择“以管理员身份运行”。
+2. 按窗口提示确认环境并按 Enter。
+3. 必须等窗口出现 ARMED 后，才按一次 KEY0。
+4. 等待 60 秒结束。
+5. 按一次开发板 RESET，再回到窗口按 Enter。
+6. 将新生成的整个 results\日期时间 文件夹保留并发回。
+
+判定：
+- PASS 必须同时满足 missing=0、gap_events=0、duplicate=0、out_of_order=0、malformed=0、metadata_errors=0、data_error_packets=0、receive_completion_errors=0。
+- 三次 60 秒受控测试已经通过。
+- 下一步右键 02_Run_315M_5min_NoCapture.cmd，以管理员身份执行 5 分钟测试。
+- 5 分钟通过后再进行 30 分钟资格测试。
+- 任意一次失败都保留结果，不连续重跑覆盖证据。
