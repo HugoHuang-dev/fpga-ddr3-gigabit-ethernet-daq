@@ -17,3 +17,8 @@
 *.jpg binary
 *.jpeg binary
 *.exe binary
+
+# Vivado ILA probe files are generated hardware debug artifacts, not TeX source.
+*.ltx linguist-generated=true
+# Bitstreams are build artifacts.
+*.bit linguist-generated=true
