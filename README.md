@@ -3,6 +3,13 @@
 **Architecture, module development, and simulation test planning: July 19–September 17, 2026 · Integration, regression, and board validation: September 19–23, 2026**  
 **Hardware: Davinci V2.1 / Xilinx Artix-7 XC7A35T · Tools: Vivado 2018.3, Verilog, ModelSim, Python, Windows RIO, and ILA**
 
+## Highlights
+
+- **Multi-clock RTL architecture:** asynchronous CDC, flow control, and continuous FPGA streaming
+- **DDR3 memory subsystem:** AXI4/MIG-controlled 256 KiB ring buffer with concurrent reads/writes and backpressure
+- **Digital design flow:** ModelSim → synthesis → static timing analysis → implementation → multi-domain ILA
+- **Hardware validation:** sustained 397.845 Mb/s UDP payload throughput over a 1-hour endurance run
+
 The project began with a UDP loopback, brought up Ethernet and DDR3 independently, and then moved a finite PRBS16 data set through DDR3 to a PC. It evolved into a continuous acquisition and streaming system with a DDR3 ring buffer, a concurrent pipeline, UART control, and on-chip XADC acquisition. After the board arrived in September, the versions were validated on hardware in succession. V5 board bring-up led to improvements in the receiver, UDP transmit timing, IPv4 checksum logic, and reset boundaries; the final V6–V9 implementations incorporated these changes. The result is a traceable evidence set spanning RTL, simulation, timing, on-board signals, and PC-side reception statistics.
 
 The system has two data sources. **PRBS16** provides repeatable, byte-for-byte verification at high throughput. The **on-chip XADC** samples temperature, VCCINT, VCCAUX, and VCCBRAM in sequence. Both sources share the FIFO, DDR3 ring-buffer, UDP, and PC verification path.
