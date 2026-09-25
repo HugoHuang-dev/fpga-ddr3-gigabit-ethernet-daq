@@ -26,7 +26,7 @@ See [PROTOCOL_V7.md](PROTOCOL_V7.md) for the byte-level interface and safety rul
 
 Behavioral tests cover:
 
-- real UART receive timing through the Part 6 PHY;
+- real UART receive timing through the UART PHY;
 - Project1-compatible CRC request validation and response generation;
 - all control commands, busy rejection, finite auto-stop, atomic READ_STATUS and corrupt-CRC rejection;
 - rate-controlled PRBS finite count and reset behavior;

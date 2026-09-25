@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Author : XiaoBai FPGA 
 // File   : ip_send.v
 // -----------------------------------------------------------------------------
 `timescale 1ns / 1ps
@@ -42,7 +41,7 @@ reg  [7:0]  tx_type_r;
 
 wire [7:0]  tx_data_delay;
 // RFC 1071 end-around carry can itself generate one more carry.  The
-// original course core folded the 32-bit sum only once, which produces an
+// folding the 32-bit sum only once produces an
 // invalid IPv4 header checksum for two consecutive package_id values in
 // every 16-bit ID period with the v5 addresses and packet length.
 wire [16:0] checksum_fold_once = {1'b0,chack_sum[31:16]} +

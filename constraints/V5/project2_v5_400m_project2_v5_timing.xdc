@@ -3,7 +3,7 @@
 
 # The 125 MHz acquisition/Ethernet clock and MIG UI clock are generated through
 # separate clock-management trees. All payload transfers between them use the
-# course asynchronous FIFO blocks; sticky status indications are synchronized
+# asynchronous FIFO blocks; sticky status indications are synchronized
 # explicitly. They therefore form asynchronous clock domains for STA.
 set acquisition_clocks [get_clocks -quiet clk_out2_clk_wiz_0]
 set ddr_ui_clocks [get_clocks -quiet clk_pll_i]

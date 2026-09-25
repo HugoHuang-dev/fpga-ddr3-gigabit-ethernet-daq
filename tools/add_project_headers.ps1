@@ -86,26 +86,24 @@ foreach ($v in $versionInfo) {
             if ($bomSize -gt 0) { [System.Array]::Copy($original, 0, $output, 0, $bomSize) }
             [System.Array]::Copy($prefix, 0, $output, $bomSize, $prefix.Length)
             [System.Array]::Copy($original, $bomSize, $output, $bomSize + $prefix.Length, $original.Length - $bomSize)
-            $originalHash = [System.Convert]::ToHexString($sha.ComputeHash($original)).ToLowerInvariant()
             [System.IO.File]::WriteAllBytes($file.FullName, $output)
-            $updatedHash = [System.Convert]::ToHexString($sha.ComputeHash($output)).ToLowerInvariant()
             $relativePath = $file.FullName.Substring($ProjectRoot.Length).TrimStart('\') -replace '\\','/'
-            $rows.Add([pscustomobject]@{
-                path = $relativePath
-                original_sha256 = $originalHash
-                headered_sha256 = $updatedHash
-                inserted_bytes = $prefix.Length
-                original_body_preserved = $true
-            })
+            $rows.Add([pscustomobject]@{ path = $relativePath })
         }
     }
 }
 
 $manifest = Join-Path $ProjectRoot 'tools\source_header_manifest.csv'
 $previous = if (Test-Path -LiteralPath $manifest) { @(Import-Csv -LiteralPath $manifest) } else { @() }
-$allRows = @($previous) + @($rows)
-if ($allRows.Count -gt 0) {
-    $allRows | Sort-Object path -Unique | Export-Csv -LiteralPath $manifest -NoTypeInformation -Encoding utf8
+$allPaths = @($previous | ForEach-Object { $_.path }) + @($rows | ForEach-Object { $_.path })
+if ($allPaths.Count -gt 0) {
+    $currentRows = foreach ($relativePath in ($allPaths | Sort-Object -Unique)) {
+        $sourcePath = Join-Path $ProjectRoot $relativePath
+        if (-not (Test-Path -LiteralPath $sourcePath -PathType Leaf)) { throw "Missing manifest source: $relativePath" }
+        $currentHash = [System.Convert]::ToHexString($sha.ComputeHash([System.IO.File]::ReadAllBytes($sourcePath))).ToLowerInvariant()
+        [pscustomobject]@{ path = $relativePath; current_sha256 = $currentHash }
+    }
+    $currentRows | Export-Csv -LiteralPath $manifest -NoTypeInformation -Encoding utf8
 }
 $v9 = Join-Path $versionsRoot 'v7_v9\project2_v9_full_validation'
 foreach ($subdir in @('rtl', 'sim', 'scripts', 'constraints')) {

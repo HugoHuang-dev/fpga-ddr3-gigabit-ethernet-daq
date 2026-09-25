@@ -111,7 +111,9 @@ Projects, results, and development records are archived by stage. The [V1–V9 i
 
 The top-level `rtl/`, `ip/`, `constraints/`, `sim/`, `scripts/`, `host/`, `board_test_package/`, and `reports/` directories contain the finalized V9 project. The top-level [V9 bitstream](project2_v9_top.bit) and [ILA probe file](project2_v9_top.ltx) are used directly by the programming script. The [release index](releases/README.md) preserves bitstreams and probe files by version. Build scripts use paths relative to this project root and generate `build/` locally. `versions/` retains stage-specific source snapshots, diagnostic variants, and their validation evidence. The [repository contents note](REPOSITORY_CONTENTS.md) distinguishes tracked evidence from larger capture traces kept in the project archive.
 
-Project-authored RTL, simulation, Vivado Tcl, and constraint files carry project headers. The protocol-stack code, generated IP, base UART/CRC modules, and reused XADC module retain their original attribution. The [source-header manifest](tools/source_header_manifest.csv) records SHA-256 values before and after header additions.
+Project-authored RTL, simulation, Vivado Tcl, and constraint files carry project headers. The [source hash manifest](tools/source_header_manifest.csv) lists SHA-256 values for the current contents of its listed source files.
+
+The `net21` Ethernet stack and `adma_v1` data mover originated in XiaoBai FPGA course examples; this project integrates them into the DDR3-to-UDP design and documents its packetization, fixes, and validation.
 
 | Material | Entry points |
 | --- | --- |

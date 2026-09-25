@@ -11,7 +11,7 @@
 // -----------------------------------------------------------------------------
 `timescale 1ns / 1ps
 
-// Keep the course clocking structure: 50 MHz board clock -> 50/200 MHz.
+// Clocking: 50 MHz board clock -> 50/200 MHz.
 // MIG uses the 200 MHz clock.  Reset remains asserted for 512 50 MHz cycles
 // after the MMCM locks so the external DDR3 receives a clean startup.
 module clock_reset_gen (

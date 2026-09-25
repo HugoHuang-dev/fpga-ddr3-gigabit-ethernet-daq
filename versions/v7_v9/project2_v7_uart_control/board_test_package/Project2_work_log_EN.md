@@ -404,7 +404,7 @@ The first V7 board interaction successfully completed READ_STATUS over COM4.
 The returned frame passed CRC and reported result OK, control version 7,
 `mig_calibrated=True`, `run_enable=False`, an empty ingress FIFO and DDR ring,
 packet sequence zero, and zero ingress, ring, TX, UART-CRC and command-rejection
-counters. This proves the V7 BIT is running, the reused Part 6 UART RX/TX path is
+counters. This proves the V7 BIT is running, the UART RX/TX path is
 correct on the board, the Project1 frame/CRC protocol interoperates with the host
 tool, the UI-clock status snapshot returns coherently, and DDR3 calibration has
 completed.

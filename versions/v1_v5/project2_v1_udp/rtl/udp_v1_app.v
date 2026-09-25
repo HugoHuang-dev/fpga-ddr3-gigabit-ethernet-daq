@@ -16,7 +16,7 @@
 // 1. Buffers one received UDP payload and sends it back unchanged.
 // 2. When idle, sends a fixed 32-byte beacon once per second.
 //
-// The surrounding XiaoBai net21 stack supplies the UDP/IP/MAC/ARP/ICMP logic.
+// The Ethernet stack supplies the UDP/IP/MAC/ARP/ICMP logic.
 module udp_v1_app #(
     parameter integer BEACON_INTERVAL_CYCLES = 125_000_000
 )(

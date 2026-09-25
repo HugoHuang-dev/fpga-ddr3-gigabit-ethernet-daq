@@ -11,8 +11,8 @@
 // -----------------------------------------------------------------------------
 `timescale 1ns / 1ps
 
-// UART physical layer follows XiaoBai FPGA Part 6 adc_udp_v3 (uart_dma,
-// uart_rx and uart_tx). Framing and CRC-16/MODBUS follow the verified
+// UART physical layer uses uart_dma, uart_rx, and uart_tx.
+// Framing and CRC-16/MODBUS follow the verified
 // Project1 protocol: A5 5A | TYPE | SEQ | LEN | PAYLOAD | CRC_LO | CRC_HI.
 module v7_uart_control #(
     parameter integer CLK_HZ = 125000000,

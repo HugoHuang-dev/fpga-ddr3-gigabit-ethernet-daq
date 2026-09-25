@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Author : XiaoBai FPGA 
 // File   : axi_adma_v1.v
 // Create : 2023-12-30 16:53:01
 // -----------------------------------------------------------------------------
@@ -79,7 +78,7 @@ module axi_adma_v1 #(
 	input    [1:0]                     m_axi_rresp       ,
 
     // Project2 v4 observability: expose the sticky FIFO error flags that
-    // already exist inside the original course ADMA implementation.
+    // are latched by the ADMA FIFO control logic.
     output                             wr_cmd_fifo_err  ,
     output                             wr_data_fifo_err ,
     output                             rd_cmd_fifo_err  ,

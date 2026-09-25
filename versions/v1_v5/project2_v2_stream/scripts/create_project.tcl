@@ -17,7 +17,7 @@ create_project project2_v2_stream $build_dir -part xc7a35tfgg484-2 -force
 set_property target_language Verilog [current_project]
 set_property simulator_language Mixed [current_project]
 
-add_files -norecurse [glob [file join $root_dir rtl vendor xiaobai_net21 *.v]]
+add_files -norecurse [glob [file join $root_dir rtl vendor net21 *.v]]
 add_files -norecurse [file join $root_dir rtl udp_v2_stream_source.v]
 add_files -norecurse [file join $root_dir rtl project2_v2_top.v]
 add_files -norecurse [glob [file join $root_dir ip *.xci]]

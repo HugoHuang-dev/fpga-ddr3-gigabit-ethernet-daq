@@ -18,4 +18,4 @@ Utilization:
   Slice Registers  15101 / 41600 (36.30%)
   Block RAM Tile      23 / 50    (46.00%)
 
-Note: inherited course FIFO/MIG/UDP IP emits reset/BRAM implementation warnings. No implementation or DRC error is present. Board-level continuous testing remains pending.
+Note: FIFO/MIG/UDP IP emits reset/BRAM implementation warnings. No implementation or DRC error is present. Board-level continuous testing remains pending.

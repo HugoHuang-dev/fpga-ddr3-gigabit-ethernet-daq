@@ -1,5 +1,4 @@
 // -----------------------------------------------------------------------------
-// Author : XiaoBai FPGA 
 // File   : udp_protocol_stack.v
 // -----------------------------------------------------------------------------
 `timescale 1ns / 1ps
@@ -252,7 +251,7 @@ module udp_protocol_stack #(
 
 		);
 
-	XiaoBai_FPGA_Arbit u1
+	udp_tx_arbiter u1
 		(
 			.clk            (app_tx_clk),
 			.reset          (app_tx_reset),
@@ -359,7 +358,7 @@ module udp_protocol_stack #(
 			.rd_arp_list_ip    (rd_arp_list_ip)
 		);
 
-	XiaoBai_FPGA_Arbit u5
+	udp_tx_arbiter u5
 		(
 			.clk            (app_tx_clk),
 			.reset          (app_tx_reset),

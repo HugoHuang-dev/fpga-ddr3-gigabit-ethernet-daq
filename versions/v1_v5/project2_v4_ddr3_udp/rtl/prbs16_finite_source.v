@@ -12,7 +12,7 @@
 `timescale 1ns / 1ps
 
 // Finite acquisition model for v4.  The source emits exactly TOTAL_WORDS
-// 16-bit PRBS words after MIG calibration.  The course ADMA write channel
+// 16-bit PRBS words after MIG calibration. The ADMA write channel
 // supplies the asynchronous FIFO between this clock and the MIG AXI clock.
 module prbs16_finite_source #(
     parameter integer TOTAL_WORDS = 32768,

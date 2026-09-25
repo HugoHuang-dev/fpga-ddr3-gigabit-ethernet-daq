@@ -11,7 +11,7 @@
 // -----------------------------------------------------------------------------
 `timescale 1ns / 1ps
 
-// Phase A: course-style MIG calibration baseline.  AXI is intentionally idle.
+// Phase A: MIG calibration baseline. AXI is intentionally idle.
 module project2_v3_calib_top (
     input  wire        sys_clk,
     inout  wire [15:0] ddr3_dq,

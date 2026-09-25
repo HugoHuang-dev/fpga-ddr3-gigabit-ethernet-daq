@@ -12,7 +12,7 @@
 `timescale 1ns / 1ps
 
 // Buffers one 1024-byte ADMA read burst, prepends a 16-byte v4 header, and
-// presents one 1040-byte UDP payload to the proven course UDP stack.
+// presents one 1040-byte UDP payload to the UDP stack.
 module udp_v4_packetizer #(
     parameter integer DATA_BYTES = 1024,
     parameter integer TOTAL_PACKETS = 64

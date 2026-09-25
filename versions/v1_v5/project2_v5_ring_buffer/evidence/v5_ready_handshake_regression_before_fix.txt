@@ -1,6 +1,6 @@
 Targeted behavioral regression added after the Windows RIO board run disproved the PC receive bottleneck hypothesis.
 
-The testbench models the course net21/udp_send behavior: app_tx_ready is high on the clock edge that accepts app_tx_data_last, then low for 50 clocks. Against the original packetizer, Vivado XSim reported:
+The testbench models the UDP transmit ready behavior: app_tx_ready is high on the clock edge that accepts app_tx_data_last, then low for 50 clocks. Against the original packetizer, Vivado XSim reported:
 
 FAIL packetizer drove data while app_tx_ready was low (40 occurrences)
 FAIL packetizer packets=1 framing=0 errors=40
