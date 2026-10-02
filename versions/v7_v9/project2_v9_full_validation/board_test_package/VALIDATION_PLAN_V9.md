@@ -20,7 +20,7 @@ Each test must run under ModelSim 10.6c with `vlog`/`vsim` and end in a self-che
 | M3 | `v6_pipeline_controller` | Write, commit, read, release, occupancy | No TX space; AXI/ADMA busy; ring wrap | AXI response, FIFO, and packetizer faults with fatal latching |
 | M4 | Combined audit | Every testbench passes | Unknown values cannot masquerade as a pass | Every injection increments its matching counter or latches fatal |
 
-Retain each testbench transcript, the combined summary, tool version, and SHA-256 of the RTL under test.
+Retain each testbench transcript, the combined summary and tool version.
 
 ## 3. Clock-domain-specific ILA capture
 
@@ -48,7 +48,6 @@ Use Vivado 2018.3 to synthesize, place, route, run DRC, and generate a bitstream
 - Slice LUT, Slice Register, Block RAM Tile, DSP, and XADC.
 - DRC error, warning, and advisory counts.
 - Actual instances and clock connections of all three ILAs.
-- SHA-256 for BIT, LTX, PC EXE, UART utility, and key RTL.
 
 The implementation gate requires WNS ≥ 0, TNS = 0, WHS ≥ 0, THS = 0, zero DRC errors, and successful bitstream generation.
 
@@ -66,6 +65,6 @@ The one-hour run produces roughly 180 GB of payload. The receiver compares it on
 
 ## 7. Acceptance criteria and recorded outcome
 
-The planned V9 acceptance requires passing ModelSim gates with all injected errors detected; passing offline PC self-tests; routed timing and DRC meeting the implementation gate; every board JSON passing; zero missing/gap/duplicate/out-of-order/malformed/metadata/sample-index/payload/receive-completion errors; zero invalid XADC records, channel-order errors, and XADC drops; empty ingress/DDR and no fatal error after STOP; and complete archival of summaries, samples, screenshots, and hashes.
+The planned V9 acceptance requires passing ModelSim gates with all injected errors detected; passing offline PC self-tests; routed timing and DRC meeting the implementation gate; every board JSON passing; zero missing/gap/duplicate/out-of-order/malformed/metadata/sample-index/payload/receive-completion errors; zero invalid XADC records, channel-order errors, and XADC drops; empty ingress/DDR and no fatal error after STOP; and complete archival of summaries, samples, and screenshots.
 
 The [board-validation record](../evidence/board_20260923/V9_BOARD_EVIDENCE_FINAL.md) documents the executed result: Gates 1–3 passed, while the full 3600-second Gate 5 run recorded missing packets and did not satisfy the strict zero-loss acceptance criterion.

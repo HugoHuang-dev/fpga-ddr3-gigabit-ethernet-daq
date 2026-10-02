@@ -22,7 +22,6 @@ V1 uses the `udp_arp_icmp_loop` protocol stack as its network foundation. The Da
 - Utilization: 2,091 LUTs, 3,985 registers, and 4.5 BRAM tiles.
 - Application-level simulation passed both byte-identical UDP echo and fixed-beacon checks.
 - The PC test script passed Python syntax validation.
-- Final bitstream SHA-256: `AB3B597C80AF45BA7FE1FBDECED11BCD206713B3E12C688C2861EDDB445CD564`.
 
 Remaining DRC warnings concern FIFO Generator asynchronous-reset checks and unused internal nets; there were no errors or critical warnings.
 

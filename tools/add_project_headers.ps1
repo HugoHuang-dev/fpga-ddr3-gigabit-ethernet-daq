@@ -37,8 +37,7 @@ foreach ($v in $versionInfo) {
 $excludeRtl = @('crc16_d8.v', 'uart_dma.v', 'uart_rx.v', 'uart_tx.v', 'xadc_multichannel.v')
 $ascii = [System.Text.Encoding]::ASCII
 $latin1 = [System.Text.Encoding]::Latin1
-$sha = [System.Security.Cryptography.SHA256]::Create()
-$rows = [System.Collections.Generic.List[object]]::new()
+$headeredCount = 0
 $projectTitle = 'FPGA DDR3-Buffered Data Acquisition and Gigabit Ethernet Transmission System'
 
 foreach ($v in $versionInfo) {
@@ -87,28 +86,14 @@ foreach ($v in $versionInfo) {
             [System.Array]::Copy($prefix, 0, $output, $bomSize, $prefix.Length)
             [System.Array]::Copy($original, $bomSize, $output, $bomSize + $prefix.Length, $original.Length - $bomSize)
             [System.IO.File]::WriteAllBytes($file.FullName, $output)
-            $relativePath = $file.FullName.Substring($ProjectRoot.Length).TrimStart('\') -replace '\\','/'
-            $rows.Add([pscustomobject]@{ path = $relativePath })
+            $headeredCount++
         }
     }
 }
 
-$manifest = Join-Path $ProjectRoot 'tools\source_header_manifest.csv'
-$previous = if (Test-Path -LiteralPath $manifest) { @(Import-Csv -LiteralPath $manifest) } else { @() }
-$allPaths = @($previous | ForEach-Object { $_.path }) + @($rows | ForEach-Object { $_.path })
-if ($allPaths.Count -gt 0) {
-    $currentRows = foreach ($relativePath in ($allPaths | Sort-Object -Unique)) {
-        $sourcePath = Join-Path $ProjectRoot $relativePath
-        if (-not (Test-Path -LiteralPath $sourcePath -PathType Leaf)) { throw "Missing manifest source: $relativePath" }
-        $currentHash = [System.Convert]::ToHexString($sha.ComputeHash([System.IO.File]::ReadAllBytes($sourcePath))).ToLowerInvariant()
-        [pscustomobject]@{ path = $relativePath; current_sha256 = $currentHash }
-    }
-    $currentRows | Export-Csv -LiteralPath $manifest -NoTypeInformation -Encoding utf8
-}
 $v9 = Join-Path $versionsRoot 'v7_v9\project2_v9_full_validation'
 foreach ($subdir in @('rtl', 'sim', 'scripts', 'constraints')) {
     Get-ChildItem -LiteralPath (Join-Path $v9 $subdir) -File |
         Copy-Item -Destination (Join-Path $ProjectRoot $subdir) -Force
 }
-Write-Output "Headered files: $($rows.Count)"
-Write-Output "Manifest: $manifest"
+Write-Output "Headered files: $headeredCount"

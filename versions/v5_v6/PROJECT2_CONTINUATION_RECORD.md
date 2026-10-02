@@ -28,7 +28,7 @@ Writes become committed only after a successful AXI B response. A DDR ring slot 
 
 [V5 project](../v1_v5/project2_v5_ring_buffer/README.md)
 
-The BIT, LTX, and EXE hashes for this run match the corresponding simulation evidence. Implementation reported WNS +0.982 ns, WHS +0.057 ns, TNS/THS 0, 11,424 LUTs, 15,121 registers, and 23 BRAM tiles. The earlier README value of 11,419 LUTs was corrected against the implementation report. Asynchronous-clock exceptions are reviewed alongside, not in place of, the CDC structure.
+Implementation reported WNS +0.982 ns, WHS +0.057 ns, TNS/THS 0, 11,424 LUTs, 15,121 registers, and 23 BRAM tiles. The earlier README value of 11,419 LUTs was corrected against the implementation report. Asynchronous-clock exceptions are reviewed alongside, not in place of, the CDC structure.
 
 ## Failure observed and diagnostic conclusion
 

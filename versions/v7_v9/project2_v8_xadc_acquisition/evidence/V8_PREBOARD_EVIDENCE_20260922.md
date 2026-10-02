@@ -25,18 +25,8 @@ Vivado XSim transcript is preserved as [`simulation/run_sim_v8.log`](simulation/
 Project1 source: `rtl/xadc_multichannel.v`. The project copy is available as
 [`../rtl/xadc_multichannel.v`](../rtl/xadc_multichannel.v).
 
-Project1 and V8 copies both have SHA-256:
-`EF467DFEA1DC4867C85712CECA18A9C35EA69B958DF6607F58DEC8A45A58F936`.
-
-## Deliverable hashes
-
-- BIT: `DAD9D9AE15C2380DC22ECF348BA5507E48AE659749717C62D5A78C3BD80637A4`
-- LTX: `84486ADDAB52CD3D26FB2410E629CBD61E271F0ACE1C2CA75D86E0B8ECBBCBE7`
-- RIO monitor EXE: `194E6BCA54DF2DD3E8B8C8C7A5FF3BC902DFFC0A632BCE676467245A7D88826A`
-- UART Python tool: `E05B69AB79AB1A808ECFA4542B3741F9F61D2767014B0B39501B3C4CB8CA0B8E`
-
 The corresponding V8 board runs were subsequently completed. Their screenshots,
-four original JSON files, measured results and hashes are preserved separately
+four original JSON files and measured results are preserved separately
 in `board_20260922/` and [`V8_BOARD_VALIDATION_EVIDENCE_20260922.md`](V8_BOARD_VALIDATION_EVIDENCE_20260922.md); this file
 remains the pre-board build/simulation record and does not retroactively mix the
 two evidence phases.

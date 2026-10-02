@@ -25,4 +25,4 @@ The Artix-7 has one XADC. MIG's original internal temperature-monitoring configu
 
 ## Result
 
-RTL, host tools, three directed behavioral simulations, Vivado 2018.3 synthesis/place/route/timing, and bitstream generation are complete. All V8 board gates passed on September 22, 2026: source 0 reached 399.422 Mb/s, and source-1 continuous (60 seconds), finite (32,768 records), and endurance (300 seconds) runs passed. PC continuity, format, data, and channel-order errors were all zero. The original JSON, screenshots, and hashes are archived.
+RTL, host tools, three directed behavioral simulations, Vivado 2018.3 synthesis/place/route/timing, and bitstream generation are complete. All V8 board gates passed on September 22, 2026: source 0 reached 399.422 Mb/s, and source-1 continuous (60 seconds), finite (32,768 records), and endurance (300 seconds) runs passed. PC continuity, format, data, and channel-order errors were all zero. The original JSON and screenshots are archived.

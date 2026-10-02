@@ -24,9 +24,9 @@ The Artix-7 device has one XADC. MIG's original configuration also uses an inter
 - [`tools/udp_v8_monitor_rio.exe`](tools/udp_v8_monitor_rio.exe): Windows RIO receiver validating P2V8, PRBS, and XADC records.
 - [`BOARD_TEST_V8.md`](BOARD_TEST_V8.md): programming-to-acceptance procedure.
 - [`PROTOCOL_V8.md`](PROTOCOL_V8.md): UART, status, and UDP formats.
-- [`BUILD_RESULTS_V8.md`](BUILD_RESULTS_V8.md): simulation, implementation, timing, utilization, and hashes.
+- [`BUILD_RESULTS_V8.md`](BUILD_RESULTS_V8.md): simulation, implementation, timing, and utilization.
 - `evidence/`: build, simulation, and board-validation evidence.
 
 ## Validation result
 
-RTL, host tools, three behavioral simulations, Vivado 2018.3 synthesis/place-and-route, timing closure, and bitstream generation are complete. All V8 board gates completed on September 22, 2026. Source 0 reached **399.422 Mb/s**. Source 1 passed a 60-second continuous run, a 32,768-record finite run, and a 300-second endurance run. PC continuity, format, data, and channel-order error counts were all zero. Raw JSON, screenshots, and hashes are in the [V8 board evidence](evidence/V8_BOARD_VALIDATION_EVIDENCE_20260922.md) and [versioned evidence index](../../../evidence/V8.md).
+RTL, host tools, three behavioral simulations, Vivado 2018.3 synthesis/place-and-route, timing closure, and bitstream generation are complete. All V8 board gates completed on September 22, 2026. Source 0 reached **399.422 Mb/s**. Source 1 passed a 60-second continuous run, a 32,768-record finite run, and a 300-second endurance run. PC continuity, format, data, and channel-order error counts were all zero. Raw JSON and screenshots are in the [V8 board evidence](evidence/V8_BOARD_VALIDATION_EVIDENCE_20260922.md) and [versioned evidence index](../../../evidence/V8.md).

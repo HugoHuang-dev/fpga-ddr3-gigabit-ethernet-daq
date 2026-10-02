@@ -95,10 +95,9 @@ archival copy uses `supplement` in its name. Other original `.ila` files are
 
 ## Board-test screenshots
 
-Twenty board-test PNGs are stored in `screenshots/`; their SHA-256 values
-are included in [`SHA256.txt`](SHA256.txt). The Gate 5 FINAL and post-STOP status images
+Twenty board-test PNGs are stored in `screenshots/`. The Gate 5 FINAL and post-STOP status images
 are stored as [`screenshots/gate5_final_failed.png`](screenshots/gate5_final_failed.png) and
-[`screenshots/gate5_post_stop_status.png`](screenshots/gate5_post_stop_status.png), with hashes in [`GATE5_SHA256.txt`](GATE5_SHA256.txt).
+[`screenshots/gate5_post_stop_status.png`](screenshots/gate5_post_stop_status.png).
 
 | Image | Filename stem | Observed role |
 | --- | --- | --- |
@@ -125,14 +124,13 @@ are stored as [`screenshots/gate5_final_failed.png`](screenshots/gate5_final_fai
 | 21 | [`gate5_final_failed.png`](screenshots/gate5_final_failed.png) | Gate 5 3600-second receiver FINAL/FAIL. |
 | 22 | [`gate5_post_stop_status.png`](screenshots/gate5_post_stop_status.png) | Gate 5 post-STOP UART status. |
 
-## Identity and project disposition
+## Project disposition
 
-[`SHA256.txt`](SHA256.txt) covers all 44 archived binary/data files: 20 PNG screenshots,
+The archive contains 44 binary/data files: 20 PNG screenshots,
 4 native ILA exports, 4 extracted CSVs, 4 JSONs (including the incomplete
-attempt), and 12 bounded sample fragments. [`GATE5_SHA256.txt`](GATE5_SHA256.txt) covers the
-additional 63 Gate 5 files: final JSON, two PNGs and 60 bounded fragments.
-Both manifests were checked against the files. The pre-board evidence file retains the BIT/LTX, software,
-RTL and Vivado-report identity hashes. No raw multi-hundred-GB payload stream
+attempt), and 12 bounded sample fragments. The
+additional 63 Gate 5 files contain: final JSON, two PNGs and 60 bounded fragments.
+No raw multi-hundred-GB payload stream
 was archived; the receiver checked it online and retained only bounded
 fragments by design.
 

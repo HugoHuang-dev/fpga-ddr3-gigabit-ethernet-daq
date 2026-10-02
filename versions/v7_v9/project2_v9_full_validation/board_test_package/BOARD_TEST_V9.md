@@ -201,6 +201,6 @@ py -3 .\v9_uart_control.py --port COM14 --seq 134 status
 
 ## 9. Evidence archive and result
 
-Retain, without overwriting earlier runs: four raw Gate 1/2/3/5 JSON files; each run's samples directory and manifest; initial/configuration/START/live/FINAL/STOP/status screenshots; four triggers across three ILAs as PNG/ILA/CSV; three ModelSim transcripts and summary; Vivado timing/utilization/DRC reports; and SHA-256 hashes for BIT, LTX, EXE, UART utility, and key RTL.
+Retain, without overwriting earlier runs: four raw Gate 1/2/3/5 JSON files; each run's samples directory and manifest; initial/configuration/START/live/FINAL/STOP/status screenshots; four triggers across three ILAs as PNG/ILA/CSV; three ModelSim transcripts and summary; Vivado timing/utilization/DRC reports.
 
 The [board-validation record](../evidence/board_20260923/V9_BOARD_EVIDENCE_FINAL.md) reports the actual outcome: Gates 1–3 passed. Gate 5 completed the full 3600 seconds, but receiver-detected missing packets failed the strict zero-loss criterion. Each gate is assessed against its own V9 result.

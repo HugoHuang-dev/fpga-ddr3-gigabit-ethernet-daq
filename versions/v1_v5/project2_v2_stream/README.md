@@ -60,7 +60,6 @@ The build script generates `build/project2_v2_stream.xpr` locally. The final bit
 - 125 MHz timing: WNS `+2.105 ns`, TNS `0.000 ns`.
 - Utilization: 1,987 LUTs, 3,801 registers, and 4 BRAM tiles.
 - Zero errors and zero critical warnings.
-- Final bitstream SHA-256: `FDDDFD866F4C1650D1723310E4689523E17EA6C823EEC158E68BCDA07419ECBD`.
 - Continuous board transmission through the external Type-C Gigabit adapter: PASS.
 
 ## Board result

@@ -26,10 +26,6 @@ Post-implementation utilization:
 - BRAM tiles: 36 / 50 (72.00%)
 - DSPs: 0
 
-Artifact identity:
-- BIT SHA-256: 514043C21BB8780886AF774E51BE701DE17FBF2B67611006206BF46BE94E2254
-- LTX SHA-256: 84486ADDAB52CD3D26FB2410E629CBD61E271F0ACE1C2CA75D86E0B8ECBBCBE7
-
 Board status:
 - Pending first controlled 60-second 400 Mb/s run.
 - No board-level V6 pass is claimed by this file.

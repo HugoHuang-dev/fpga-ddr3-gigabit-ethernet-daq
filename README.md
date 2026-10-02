@@ -86,7 +86,7 @@ V9 focused on system-level validation and metrics. P2V9 added a **64-bit first-s
 
 On September 23, Gate 1 passed a 60-second PRBS16 board run at approximately **397.855 Mb/s**, with every check satisfied. Gate 2 passed a finite 32,768-record XADC run, and Gate 3 passed a 300-second XADC run. Four native ILA captures documented acquisition handshakes, PHY RX activity, DDR commitment, and a separate `packet_done` capture. See the [V9 board evidence index](versions/v7_v9/project2_v9_full_validation/evidence/board_20260923/V9_BOARD_EVIDENCE_FINAL.md).
 
-Gate 5 ran for the full **3,600 seconds** and received **174,834,426 packets** and **179,030,452,224 bytes** at an average UDP payload rate of **397.845 Mb/s**, a packet delivery rate of approximately **99.998957%**. The receiver recorded 30 gaps totaling **1,824 packets**. All received data passed PRBS byte, format, and metadata checks. This is a one-hour high-load throughput and integrity measurement; the planned zero-loss acceptance item was **not passed**. The [raw Gate 5 JSON](versions/v7_v9/project2_v9_full_validation/evidence/board_20260923/results/v9_gate5_prbs_1024B_25M_3600s.json) and [screenshot, waveform, and hash index](versions/v7_v9/project2_v9_full_validation/evidence/board_20260923/V9_BOARD_EVIDENCE_FINAL.md) preserve the measured outcome.
+Gate 5 ran for the full **3,600 seconds** and received **174,834,426 packets** and **179,030,452,224 bytes** at an average UDP payload rate of **397.845 Mb/s**, a packet delivery rate of approximately **99.998957%**. The receiver recorded 30 gaps totaling **1,824 packets**. All received data passed PRBS byte, format, and metadata checks. This is a one-hour high-load throughput and integrity measurement; the planned zero-loss acceptance item was **not passed**. The [raw Gate 5 JSON](versions/v7_v9/project2_v9_full_validation/evidence/board_20260923/results/v9_gate5_prbs_1024B_25M_3600s.json) and [screenshot and waveform index](versions/v7_v9/project2_v9_full_validation/evidence/board_20260923/V9_BOARD_EVIDENCE_FINAL.md) preserve the measured outcome.
 
 ## Rebuild and verify
 
@@ -111,7 +111,7 @@ Projects, results, and development records are archived by stage. The [V1–V9 i
 
 The top-level `rtl/`, `ip/`, `constraints/`, `sim/`, `scripts/`, `host/`, `board_test_package/`, and `reports/` directories contain the finalized V9 project. The top-level [V9 bitstream](project2_v9_top.bit) and [ILA probe file](project2_v9_top.ltx) are used directly by the programming script. The [release index](releases/README.md) preserves bitstreams and probe files by version. Build scripts use paths relative to this project root and generate `build/` locally. `versions/` retains stage-specific source snapshots, diagnostic variants, and their validation evidence. The [repository contents note](REPOSITORY_CONTENTS.md) distinguishes tracked evidence from larger capture traces kept in the project archive.
 
-Project-authored RTL, simulation, Vivado Tcl, and constraint files carry project headers. The [source hash manifest](tools/source_header_manifest.csv) lists SHA-256 values for the current contents of its listed source files.
+Project-authored RTL, simulation, Vivado Tcl, and constraint files carry project headers.
 
 The `net21` Ethernet stack and `adma_v1` data mover originated in XiaoBai FPGA course examples; this project integrates them into the DDR3-to-UDP design and documents its packetization, fixes, and validation.
 

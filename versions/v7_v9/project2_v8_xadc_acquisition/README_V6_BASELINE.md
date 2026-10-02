@@ -27,5 +27,5 @@ The V6 board ILA set is also complete. Seven triggered acquisitions, retained as
 upper/lower panel screenshots, verify ingress pause/resume hysteresis, 64 KiB DDR
 drain activation, safe 256 KiB full-ring backpressure, overlapping DDR writes and
 reads, read-burst commitment to the egress FIFO, UDP packet completion, and zero
-internal overflow/underflow/fatal counters. The evidence and SHA-256 manifest are in
+internal overflow/underflow/fatal counters. The evidence is in
 `../evidence/ila_v6_*`.

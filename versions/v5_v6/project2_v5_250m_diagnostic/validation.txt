@@ -32,10 +32,5 @@ Slice Registers: 15223 / 41600 (36.59%)
 Block RAM Tile: 23.5 / 50 (47.00%)
 DSPs: 0 / 90
 
-Final artifact SHA-256:
-project2_v5_top.bit  61965B6466B97F202CC36B33A1B269DCDC579781201707E96AF00FBD69DA0DF9
-project2_v5_top.ltx  7EEBB68F7DF07BC0F406E21123A449CB7B3B8941C15F8F174DD6068AA00CC846
-
 Board status:
 Not yet board-tested. Do not label this image as a validated operating point until the staged tests pass.
-

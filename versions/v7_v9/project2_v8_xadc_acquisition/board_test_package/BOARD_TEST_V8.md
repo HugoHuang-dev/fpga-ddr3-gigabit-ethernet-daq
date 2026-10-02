@@ -179,6 +179,6 @@ Keep the four original JSON files:
 [Gate 2](../evidence/board_20260922/v8_gate2_xadc_1024B_60s.json),
 [Gate 3](../evidence/board_20260922/v8_gate3_xadc_finite_32768.json), and
 [Gate 4](../evidence/board_20260922/v8_gate4_xadc_1024B_300s.json).
-For each gate, retain B's FINAL/PASS and A's configuration, START, STOP, and final status with commands and output visible. The 22 unique screenshots and JSON files are archived under `evidence/board_20260922/`; a repeated reference to one 300-second FINAL screenshot was deduplicated. Per-file hashes and quantitative checks are in the [V8 board evidence record](../evidence/V8_BOARD_VALIDATION_EVIDENCE_20260922.md).
+For each gate, retain B's FINAL/PASS and A's configuration, START, STOP, and final status with commands and output visible. The 22 unique screenshots and JSON files are archived under `evidence/board_20260922/`; a repeated reference to one 300-second FINAL screenshot was deduplicated. Quantitative checks are in the [V8 board evidence record](../evidence/V8_BOARD_VALIDATION_EVIDENCE_20260922.md).
 
 V6 ILA and V7 UART/UDP already have separate board evidence. V8's passing run does not repeat those ILA captures. For an unresolved failure, preserve its UART/JSON evidence first, then use the matching [V8 LTX](project2_v8_top.ltx) to localize ingress, DDR, or TX behavior.

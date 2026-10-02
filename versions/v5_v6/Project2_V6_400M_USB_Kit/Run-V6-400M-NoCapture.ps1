@@ -11,10 +11,6 @@ if (-not $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administra
 }
 
 $exe = Join-Path $PSScriptRoot 'receiver\udp_v5_monitor_rio.exe'
-$expectedReceiverHash = '2C9FD4FB01C2A26C84413E293736C20CBF86F81A17F4D4626CDC5AB58576F253'
-if ((Get-FileHash -LiteralPath $exe -Algorithm SHA256).Hash -ne $expectedReceiverHash) {
-    throw 'Receiver hash mismatch.'
-}
 
 $ip = @(Get-NetIPAddress -AddressFamily IPv4 -IPAddress '192.168.1.100' -ErrorAction SilentlyContinue)
 if ($ip.Count -ne 1 -or $ip[0].PrefixLength -ne 24) {

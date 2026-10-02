@@ -27,10 +27,5 @@ Checks:
 
 Utilization and detailed reports are under reports/.
 
-SHA-256:
-project2_v5_top.bit  715D1FD4565129A87150922E5D4805152B6315E721056F4A8AA3A8EC4B251A91
-project2_v5_top.ltx  7EEBB68F7DF07BC0F406E21123A449CB7B3B8941C15F8F174DD6068AA00CC846
-
 Board status:
 Not yet board-tested.
-

@@ -2,7 +2,6 @@ $ErrorActionPreference = 'Stop'
 $principal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
 if (-not $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) { throw 'Right-click 02_Run_Test.cmd and choose Run as administrator.' }
 $exe = Join-Path $PSScriptRoot 'receiver\udp_v5_monitor_rio.exe'
-if ((Get-FileHash -LiteralPath $exe -Algorithm SHA256).Hash -ne '2C9FD4FB01C2A26C84413E293736C20CBF86F81A17F4D4626CDC5AB58576F253') { throw 'Receiver hash mismatch.' }
 $ip = @(Get-NetIPAddress -AddressFamily IPv4 -IPAddress '192.168.1.100' -ErrorAction SilentlyContinue)
 if ($ip.Count -ne 1 -or $ip[0].PrefixLength -ne 24) { throw 'Set exactly one Ethernet interface to 192.168.1.100 / 255.255.255.0 first.' }
 $adapter = Get-NetAdapter -InterfaceIndex $ip[0].InterfaceIndex

@@ -12,7 +12,7 @@ The engineering challenge is coordination across different clocks and rates: pre
 
 V6 combines a continuous PRBS test source, 4 KiB ingress FIFO, 3 KiB pause/1 KiB resume thresholds, a 256 KiB DDR3 ring, 1024-byte AXI write and read bursts, 64 KiB drain-start/16 KiB drain-stop thresholds, and an eight-complete-packet TX FIFO. UDP retains the verified `P2V5` / version `0x05` format and Windows RIO receiver. DDR write, DDR read, and UDP transmission progress concurrently.
 
-Behavioral simulation and fault counters, Vivado implementation/timing/DRC, a strict 60-second 400 Mb/s board run, and ILA captures all passed. ILA coverage includes ingress hysteresis, DDR drain startup, full-ring backpressure, overlapping read/write, complete-burst transfer into the TX FIFO, and UDP packet completion. BIT, LTX, receiver, JSON, screenshots, hashes, and work log were archived together.
+Behavioral simulation and fault counters, Vivado implementation/timing/DRC, a strict 60-second 400 Mb/s board run, and ILA captures all passed. ILA coverage includes ingress hysteresis, DDR drain startup, full-ring backpressure, overlapping read/write, complete-burst transfer into the TX FIFO, and UDP packet completion. BIT, LTX, receiver, JSON, screenshots, and work log were archived together.
 
 ```text
 V6 CLOSED — IMPLEMENTATION AND BOARD VALIDATION PASSED
@@ -23,14 +23,6 @@ V6 CLOSED — IMPLEMENTATION AND BOARD VALIDATION PASSED
 The 60.0005534-second run measured **399.404922022 Mb/s** UDP payload rate, **2,925,356 packets**, and **2,995,564,544 validated bytes**. Missing packets, gaps, duplicates, reordering, malformed/metadata/PRBS errors, RIO completion errors, Windows NIC receive errors/discards, all ingress/ring/TX overflow and underflow counters, and `fatal_error` were zero.
 
 Routed implementation: WNS **+0.887 ns**, TNS **0**, WHS **+0.055 ns**, THS **0**; LUT **14,126/20,800 (67.91%)**, registers **16,434/41,600 (39.50%)**, BRAM **36/50 (72%)**, DSP **0**. DRC had zero errors; remaining warnings/advisories originated in MIG/FIFO/UDP IP.
-
-Artifact SHA-256:
-
-- BIT: `514043C21BB8780886AF774E51BE701DE17FBF2B67611006206BF46BE94E2254`
-- LTX: `84486ADDAB52CD3D26FB2410E629CBD61E271F0ACE1C2CA75D86E0B8ECBBCBE7`
-- V6 board-test ZIP: `EE18FAAA1CE55355F940B503F8FF7AF9F1F84FB5A5907DD21CEBA2ADD4574982`
-- 60-second `rio_result.json`: `9E01CB3842CA0509411DBFCC5E480F9108FD83BE2B7FAE7AF84D3908DD30E08E`
-- Manifest for 14 V6 ILA screenshots: `13973396AD3B8005E2310CA0098E44321CA135C7C4B14592FC9C4C14D40DA8F8`
 
 ## V5/MAX performance context
 
@@ -55,7 +47,7 @@ At this checkpoint, the highest short zero-loss result was 680.207 Mb/s for 60 s
 
 ## Development and verification method
 
-Each version freezes a passing baseline and one primary change. Observability—status bits, counters, ILA probes, JSON fields, and pass criteria—is specified before RTL changes. Modular RTL separates acquisition, ingress FIFO, DDR scheduling/ring control, egress FIFO, packetizer, and UDP stack. Behavioral regression covers normal transfer, ready stalls, FIFO limits, watermark hysteresis, wraparound, concurrent reads/writes, and injected errors. Vivado checks timing, CDC structure, bus skew, resources, and DRC before generating a matched BIT/LTX pair with hashes.
+Each version freezes a passing baseline and one primary change. Observability—status bits, counters, ILA probes, JSON fields, and pass criteria—is specified before RTL changes. Modular RTL separates acquisition, ingress FIFO, DDR scheduling/ring control, egress FIFO, packetizer, and UDP stack. Behavioral regression covers normal transfer, ready stalls, FIFO limits, watermark hysteresis, wraparound, concurrent reads/writes, and injected errors. Vivado checks timing, CDC structure, bus skew, resources, and DRC before generating a matched BIT/LTX pair.
 
 Board validation starts with a short, strict receiver run without packet capture; ILA diagnosis is performed separately so capture does not perturb host throughput. NIC, cable, IP settings, 1 Gbps link, power mode, buffers, process priority, and adapter counters are recorded. Acceptance uses JSON sequence, format, metadata, and byte-level PRBS checks, not a visual impression of terminal output. ILA captures retain trigger line, Name/Value, and upper/lower probe views. Duration then increases from 60 seconds through repeat runs and several minutes to 30 minutes or an hour, retaining failed outcomes and their diagnostic context.
 

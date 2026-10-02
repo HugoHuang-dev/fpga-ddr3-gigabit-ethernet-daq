@@ -19,4 +19,4 @@ This directory stores the board implementation files by version. Each `.bit` fil
 | V8 XADC Acquisition | [Bitstream](V8/project2_v8_top.bit) · [ILA probes](V8/project2_v8_top.ltx) | [V8 project](../versions/v7_v9/project2_v8_xadc_acquisition/README.md) |
 | V9 Full Validation | [Bitstream](V9/project2_v9_top.bit) · [ILA probes](V9/project2_v9_top.ltx) | [V9 board evidence](../versions/v7_v9/project2_v9_full_validation/evidence/board_20260923/V9_BOARD_EVIDENCE_FINAL.md) |
 
-Several V5 bitstreams share the same filename but belong to different test configurations. Always use the `.bit` and `.ltx` pair from the same directory. Checksums for all 28 configuration and probe files are in the [SHA-256 manifest](SHA256SUMS.csv).
+Several V5 bitstreams share the same filename but belong to different test configurations. Always use the `.bit` and `.ltx` pair from the same directory.csv).

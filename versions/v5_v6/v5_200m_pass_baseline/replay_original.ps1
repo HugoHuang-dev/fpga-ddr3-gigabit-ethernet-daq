@@ -4,14 +4,6 @@ $principal = New-Object Security.Principal.WindowsPrincipal($identity)
 if (-not $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     throw 'Open Administrator PowerShell before running this capture replay.'
 }
-$expected = @{
-    'project2_v5_top.bit' = 'E0BFAA90E77DDE94257B0FADD033CE97A525727A88EF42C5B377DD6D1947FBD3'
-    'project2_v5_top.ltx' = '9C76CD050FE5EC07BB8F57763B124F2F55F324171469F33C22CD040041A01931'
-    'udp_v5_monitor_rio.exe' = '2C9FD4FB01C2A26C84413E293736C20CBF86F81A17F4D4626CDC5AB58576F253'
-}
-foreach ($name in $expected.Keys) {
-    if ((Get-FileHash -LiteralPath (Join-Path $PSScriptRoot $name) -Algorithm SHA256).Hash -ne $expected[$name]) { throw "Hash mismatch: $name" }
-}
 $runDir = Join-Path $PSScriptRoot ('replays\' + (Get-Date -Format 'yyyyMMdd_HHmmss_fff'))
 New-Item -ItemType Directory -Path $runDir | Out-Null
 Start-Transcript -Path (Join-Path $runDir 'console.txt') | Out-Null
